@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css,入门," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,19 +84,22 @@
 
 
 
-<meta name="description" content="零零碎碎的东西太多，需要理解的东西也不少。有个好的导师真的是一件特别幸福的事，对于初入门的人，面对搜索的各种答案真的会凌乱，待基础打好后再来看一些深入的东西应该会得心应手了吧~学习过程中努力搞清楚的知识点，在这里留下一点印记。">
+<meta name="description" content="标签（空格分隔）： null undefined
+
+在JavaScript开发中，被人问到：null与undefined到底有啥区别？ 一时间不好回答，特别是undefined，因为这涉及到undefined的实现原理。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端入门笔记（2）--css">
-<meta property="og:url" content="http://yoursite.com/2016/06/11/前端入门笔记（2）--css/index.html">
+<meta property="og:title" content="JavaScript中的null和undefined的区别">
+<meta property="og:url" content="http://yoursite.com/2016/06/12/JavaScript中的null和undefined的区别/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="零零碎碎的东西太多，需要理解的东西也不少。有个好的导师真的是一件特别幸福的事，对于初入门的人，面对搜索的各种答案真的会凌乱，待基础打好后再来看一些深入的东西应该会得心应手了吧~学习过程中努力搞清楚的知识点，在这里留下一点印记。">
-<meta property="og:image" content="http://yoursite.com/./images/766267-b4fbe2ab92e1bc62.png">
-<meta property="og:image" content="http://yoursite.com/./images/hezi2.png">
-<meta property="og:updated_time" content="2016-06-10T16:56:31.000Z">
+<meta property="og:description" content="标签（空格分隔）： null undefined
+
+在JavaScript开发中，被人问到：null与undefined到底有啥区别？ 一时间不好回答，特别是undefined，因为这涉及到undefined的实现原理。">
+<meta property="og:updated_time" content="2016-06-12T07:49:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端入门笔记（2）--css">
-<meta name="twitter:description" content="零零碎碎的东西太多，需要理解的东西也不少。有个好的导师真的是一件特别幸福的事，对于初入门的人，面对搜索的各种答案真的会凌乱，待基础打好后再来看一些深入的东西应该会得心应手了吧~学习过程中努力搞清楚的知识点，在这里留下一点印记。">
-<meta name="twitter:image" content="http://yoursite.com/./images/766267-b4fbe2ab92e1bc62.png">
+<meta name="twitter:title" content="JavaScript中的null和undefined的区别">
+<meta name="twitter:description" content="标签（空格分隔）： null undefined
+
+在JavaScript开发中，被人问到：null与undefined到底有啥区别？ 一时间不好回答，特别是undefined，因为这涉及到undefined的实现原理。">
 
 
 
@@ -117,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/11/前端入门笔记（2）--css/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/12/JavaScript中的null和undefined的区别/"/>
 
-  <title> 前端入门笔记（2）--css | Hexo </title>
+  <title> JavaScript中的null和undefined的区别 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +242,7 @@
             
             
               
-                前端入门笔记（2）--css
+                JavaScript中的null和undefined的区别
               
             
           </h1>
@@ -251,8 +254,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-11T00:56:31+08:00" content="2016-06-11">
-              2016-06-11
+            <time itemprop="dateCreated" datetime="2016-06-12T15:49:44+08:00" content="2016-06-12">
+              2016-06-12
             </time>
           </span>
 
@@ -279,147 +282,30 @@
       
 
       
-        <p>零零碎碎的东西太多，需要理解的东西也不少。有个好的导师真的是一件特别幸福的事，对于初入门的人，面对搜索的各种答案真的会凌乱，待基础打好后再来看一些深入的东西应该会得心应手了吧~学习过程中努力搞清楚的知识点，在这里留下一点印记。<br><a id="more"></a></p>
+        <p>标签（空格分隔）： null undefined</p>
 <hr>
-<p><strong>1.选择器的权重问题。</strong></p>
-<p>以以下一小段代码为例：</p>
-<pre><code>&lt;div class=&quot;cla1&quot;&gt;
-
-&lt;p id=&quot;id1&quot; class=&quot;cla2&quot;&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-</code></pre><p>选择排序如下：</p>
-<p>#id1 &gt;  .cla1 .cla2 &gt; .cla2 &gt;div p</p>
-<p><strong>2.图片的放入位置。</strong></p>
-<p>css中：图片为固定的图片，不会因为操作人的不同或内容更新而更换的放在css的background中；</p>
-<p>html中：图片与部分内容相关，会时时更新的则放在html的<img>标签中，由后台的数据库调出。</p>
-<p><strong>3.文本和图像的居中问题。</strong></p>
-<p>文本水平居中:text-align:center;</p>
-<p>文本垂直居中：1.设置line-height=height；2.设置上下padding相等；</p>
-<p>图像水平居中：margin：0 auto；</p>
-<p>图像垂直居中（item为父容器的class）：</p>
-<p>.方式1：给img的父容器设置成表格方式，加入vertical-align: middle;具体如下：</p>
-<pre><code>.item{
-
-width: 400px;
-
-height: 300px;
-
-border: 1px solid red;
-
-margin: 0 auto;
-
-text-align: center;
-
-display: table-cell;
-
-vertical-align: middle;
-
-}
-</code></pre><p>.方式2,：</p>
-<pre><code>.item{
-
-width: 400px;
-
-height: 300px;
-
-border: 1px solid red;
-
-text-align: center;
-
-}
-
-.item:before{
-
-content: &apos;&apos;;
-
-display:inline-block;
-
-height: 100%;
-
-vertical-align: middle;
-
-}
-
-.item img{
-
-vertical-align: middle;
-
-}
-</code></pre><p><strong>4.display:none、visibility:hidden区别及overflow属性。</strong></p>
-<p>display：none  对应元素脱离文档流，不显示；</p>
-<p>visibility:hidden 对应元素不显示，但是占据文档空间，相当于opacity：0；</p>
-<p>overflow：scroll，必会出现滚动条；auto，子元素内容大于父元素时出现滚动条；visible，溢出的内容出现在父元素之外；hidden，溢出隐藏。</p>
-<p><strong>5.盒模型。</strong></p>
-<p>标准盒模型：<br><img src="./images/766267-b4fbe2ab92e1bc62.png" alt="enter description here" title="766267-b4fbe2ab92e1bc62.png"></p>
-<p>怪异盒模型（ie下）：<br><img src="./images/hezi2.png" alt="enter description here" title="hezi2.png"></p>
-<p><strong>6.css定位机制（position、float）。</strong></p>
-<p>position：static 默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）；</p>
-<p>position：relative 相对于自身的正常位置进行定位；</p>
-<p>position：absolute 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。以top、right、bottom、left进行定位。</p>
-<p>position：fixed  生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</p>
-<p>float：使浮动框脱离文档流，若该元素的兄弟元素都是浮动元素，且父元素未设置宽高，则父元素无法被撑开。要使其正常出现，则需为父元素设置宽高或清除浮动。</p>
-<p><strong>7.清除浮动的几种方法。</strong></p>
-<p>方法一：在父元素的最后添加一个无意义的元素</p>
-<pre><code>.clearfix:after{
-
-content: &quot;&quot;;
-
-display: block;
-
-clear: both;
-
-}
-</code></pre><p>方法二：为父元素添加overflow:hidden;</p>
-<pre><code>.clearfix{
-
-overflow:hidden;
-
-_zoom:1; /* for ie 6*/
-
-}
-</code></pre><p><strong>8.简述两种css布局。</strong></p>
-<p>布局一：三列并排等高显示（利用超大内边距和相同的负外边距）</p>
-<p>布局二：侧边栏宽度固定，内容部分宽度自适应。</p>
-<p><strong>9.页面渲染。</strong></p>
-<p>页面渲染从上到下进行：</p>
-<p>css放在html标签的头部：页面加载从上到下，先加载出css再加载html，防止html加载出来样式却还未加载出来，页面呈现不带样式的html；</p>
-<p>js放在body尾部：js执行功能，最后加载可以加快页面的出现速度；同时，js是针对页面节点进行操作，必须保证页面节点都已经存在。</p>
-<p><strong>10.为什么要初始化css样式</strong></p>
-<p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。</p>
-<pre><code>{padding: 0; margin: 0;}
-</code></pre><p><em>淘宝的样式初始化：</em></p>
-<pre><code>body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
-
-body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
-
-h1, h2, h3, h4, h5, h6{ font-size:100%; }
-
-address, cite, dfn, em, var { font-style:normal; }
-
-code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
-
-small{ font-size:12px; }
-
-ul, ol { list-style:none; }
-
-a { text-decoration:none; }
-
-a:hover { text-decoration:underline; }
-
-sup { vertical-align:text-top; }
-
-sub{ vertical-align:text-bottom; }
-
-legend { color:#000; }
-
-fieldset, img { border:0; }
-
-button, input, select, textarea { font-size:100%; }
-
-table { border-collapse:collapse; border-spacing:0; }
-</code></pre><p><strong>10.什么是css sprite。</strong></p>
-<p>CSS Sprites 其实就是把网页中一些背景图片整合到一张图片文件中，再利用 CSS 的”background-image”，”background-repeat”，”background-position” 的组合进行背景定位，background-position 可以用数字能精确的定位出背景图片的位置。这样可以减少很多图片请求的开销。</p>
+<p>在JavaScript开发中，被人问到：null与undefined到底有啥区别？ 一时间不好回答，特别是undefined，因为这涉及到undefined的实现原理。<br><a id="more"></a><br>总所周知：null == undefined<br>但是：null !== undefined<br>那么这两者到底有啥区别呢？</p>
+<p>null</p>
+<p>这是一个对象，但是为空。因为是对象，所以 typeof null 返回 ‘object’ 。</p>
+<p>null 是 JavaScript 保留关键字。</p>
+<p>null 参与数值运算时其值会自动转换为 0 ，因此，下列表达式计算后会得到正确的数值：</p>
+<p>表达式：123 + null　　　　结果值：123</p>
+<p>表达式：123 * null　　　　结果值：0</p>
+<p>undefined</p>
+<p>undefined是全局对象（window）的一个特殊属性，其值是未定义的。但 typeof undefined 返回 ‘undefined’ 。</p>
+<p>虽然undefined是有特殊含义的，但它确实是一个属性，而且是全局对象（window）的属性。请看下面的代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">alert(<span class="string">'undefined'</span> <span class="keyword">in</span> <span class="built_in">window</span>);   <span class="comment">//输出：true</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="keyword">var</span> anObj = &#123;&#125;;</span><br><span class="line"><span class="number">3</span></span><br><span class="line">alert(<span class="string">'undefined'</span> <span class="keyword">in</span> anObj);    <span class="comment">//输出：false</span></span><br></pre></td></tr></table></figure></p>
+<p>从中可以看出，undefined是window对象的一个属性，但却不是anObj对象的一个属性。</p>
+<p>注意：尽管undefined是有特殊含义的属性，但却不是JavaScript的保留关键字。</p>
+<p>undefined参与任何数值计算时，其结果一定是NaN。</p>
+<p>随便说一下，NaN是全局对象（window）的另一个特殊属性，Infinity也是。这些特殊属性都不是JavaScript的保留关键字。<br>提高undefined性能</p>
+<p>当我们在程序中使用undefined值时，实际上使用的是window对象的undefined属性。</p>
+<p>同样，当我们定义一个变量但未赋予其初始值，例如：</p>
+<p>var aValue;</p>
+<p>这时，JavaScript在所谓的预编译时会将其初始值设置为对window.undefined属性的引用。</p>
+<p>于是，当我们将一个变量或值与undefined比较时，实际上是与window对象的undefined属性比较。这个比较过程中，JavaScript会搜索window对象名叫’undefined’的属性，然后再比较两个操作数的引用指针是否相同。</p>
+<p>由于window对象的属性值是非常多的，在每一次与undefined的比较中，搜索window对象的undefined属性都会花费时 间。在需要频繁与undefined进行比较的函数中，这可能会是一个性能问题点。因此，在这种情况下，我们可以自行定义一个局部的undefined变 量，来加快对undefined的比较速度。例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">   <span class="number">01</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">anyFunc</span>(<span class="params"></span>)</span><br><span class="line">02</span><br><span class="line">    </span>&#123;</span><br><span class="line"><span class="number">03</span></span><br><span class="line">        <span class="keyword">var</span> <span class="literal">undefined</span>;          <span class="comment">//自定义局部undefined变量</span></span><br><span class="line"><span class="number">04</span></span><br><span class="line">         </span><br><span class="line"><span class="number">05</span></span><br><span class="line">        <span class="keyword">if</span>(x == <span class="literal">undefined</span>)      <span class="comment">//作用域上的引用比较</span></span><br><span class="line"><span class="number">06</span></span><br><span class="line">         </span><br><span class="line"><span class="number">07</span></span><br><span class="line">         </span><br><span class="line"><span class="number">08</span></span><br><span class="line">        <span class="keyword">while</span>(y != <span class="literal">undefined</span>)   <span class="comment">//作用域上的引用比较</span></span><br><span class="line"><span class="number">09</span></span><br><span class="line">         </span><br><span class="line"><span class="number">10</span></span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>其中，定义undefined局部变量时，其初始值会是对window.undefined属性值的引用。新定义的局部undefined变 量存在与该函数的作用域上。在随后的比较操作中，JavaScript代码的书写方式没有任何的改变，但比较速度却很快。因为作用域上的变量数量会远远少 于window对象的属性，搜索变量的速度会极大提高。</p>
+<p>这就是许多前端JS框架为什么常常要自己定义一个局部undefined变量的原因。</p>
 
       
     </div>
@@ -439,28 +325,18 @@ table { border-collapse:collapse; border-spacing:0; }
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/css-入门/" rel="tag">#css,入门</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/11/js获取小数点后2位数字方法/" rel="next" title="用JS获取小数点后两位数字方法">
-                <i class="fa fa-chevron-left"></i> 用JS获取小数点后两位数字方法
+              <a href="/2016/06/11/title- web前端响应式设计总结/" rel="next" title="web前端响应式设计总结">
+                <i class="fa fa-chevron-left"></i> web前端响应式设计总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/11/猜数字/" rel="prev" title="猜数字小习题">
-                猜数字小习题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
