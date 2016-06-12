@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="猜数字," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="-多练多看多思考！！1.输入一个数字？2.猜数字的条件？if。。。else3.5次错误？循环">
+<meta name="description" content="标签（空格分隔）：px em rem
+
+  国内的设计师大都喜欢用px，而国外的网站大都喜欢用em和rem，那么三者有什么区别，又各自有什么优劣呢？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="猜数字小习题">
-<meta property="og:url" content="http://yoursite.com/2016/06/11/猜数字/index.html">
+<meta property="og:title" content="css中单位px和em,rem的区别">
+<meta property="og:url" content="http://yoursite.com/2016/06/13/title- css中单位px和em,rem的区别/index.html">
 <meta property="og:site_name" content="一只努力向上的老猿">
-<meta property="og:description" content="-多练多看多思考！！1.输入一个数字？2.猜数字的条件？if。。。else3.5次错误？循环">
-<meta property="og:updated_time" content="2016-06-10T16:56:46.000Z">
+<meta property="og:description" content="标签（空格分隔）：px em rem
+
+  国内的设计师大都喜欢用px，而国外的网站大都喜欢用em和rem，那么三者有什么区别，又各自有什么优劣呢？">
+<meta property="og:updated_time" content="2016-06-12T16:34:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="猜数字小习题">
-<meta name="twitter:description" content="-多练多看多思考！！1.输入一个数字？2.猜数字的条件？if。。。else3.5次错误？循环">
+<meta name="twitter:title" content="css中单位px和em,rem的区别">
+<meta name="twitter:description" content="标签（空格分隔）：px em rem
+
+  国内的设计师大都喜欢用px，而国外的网站大都喜欢用em和rem，那么三者有什么区别，又各自有什么优劣呢？">
 
 
 
@@ -114,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/11/猜数字/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/13/title- css中单位px和em,rem的区别/"/>
 
-  <title> 猜数字小习题 | 一只努力向上的老猿 </title>
+  <title> css中单位px和em,rem的区别 | 一只努力向上的老猿 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -246,7 +252,7 @@
             
             
               
-                猜数字小习题
+                css中单位px和em,rem的区别
               
             
           </h1>
@@ -258,8 +264,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-11T00:56:46+08:00" content="2016-06-11">
-              2016-06-11
+            <time itemprop="dateCreated" datetime="2016-06-13T00:34:57+08:00" content="2016-06-13">
+              2016-06-13
             </time>
           </span>
 
@@ -286,39 +292,45 @@
       
 
       
-        <p>-<br><strong>多练多看多思考！！</strong><br>1.输入一个数字？<br>2.猜数字的条件？if。。。else<br>3.5次错误？循环</p>
-<a id="more"></a>
-<pre><code>function findNumber(){
-          var okNumeber = 11;
-          for (var i = 1; i &lt;= 5; i++) { 
-              var xnumber = prompt(&quot;请输入数字&quot;);
-              var n = parseFloat(xnumber);
-              if (n &gt; okNumeber) {
-                  //第五次猜错
-                  if(i==5){
-                      alert(&quot;智商低&quot;);
-                      break;
-                  }
-                  alert(&quot;数字过大,第&quot;+i+&quot;次&quot;);
-              }
+        <p>标签（空格分隔）：px em rem</p>
+<hr>
+<p>  国内的设计师大都喜欢用px，而国外的网站大都喜欢用em和rem，那么三者有什么区别，又各自有什么优劣呢？<br><a id="more"></a><br>PX特点</p>
+<ol>
+<li><p>IE无法调整那些使用px作为单位的字体大小；</p>
+</li>
+<li><p>国外的大部分网站能够调整的原因在于其使用了em或rem作为字体单位；</p>
+</li>
+<li><p>Firefox能够调整px和em，rem，但是96%以上的中国网民使用IE浏览器(或内核)。</p>
+</li>
+</ol>
+<p>px像素（Pixel）。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。(引自CSS2.0手册)</p>
+<p>em是相对长度单位。相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。(引自CSS2.0手册)</p>
+<pre><code>任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。为了简化font-size的换算，需要在css中的body选择器中声明Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。
+</code></pre><p>EM特点 </p>
+<ol>
+<li><p>em的值并不是固定的；</p>
+</li>
+<li><p>em会继承父级元素的字体大小。</p>
+</li>
+</ol>
+<p>所以我们在写CSS的时候，需要注意两点：</p>
+<ol>
+<li><p>body选择器中声明Font-size=62.5%；</p>
+</li>
+<li><p>将你的原来的px数值除以10，然后换上em作为单位；</p>
+</li>
+<li><p>重新计算那些被放大的字体的em数值。避免字体大小的重复声明。</p>
+</li>
+</ol>
+<pre><code>也就是避免1.2 * 1.2= 1.44的现象。比如说你在#content中声明了字体大小为1.2em，那么在声明p的字体大小时就只能是1em，而不是1.2em, 因为此em非彼em，它因继承#content的字体高而变为了1em=12px。
+</code></pre><p>rem特点 </p>
+<pre><code>rem是CSS3新增的一个相对单位（root em，根em），这个单位引起了广泛关注。这个单位与em有什么区别呢？区别在于使用rem为元素设定字体大小时，仍然是相对大小，但相对的只是HTML根元素。这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。目前，除了IE8及更早版本外，所有浏览器均已支持rem。对于不支持它的浏览器，应对方法也很简单，就是多写一个绝对单位的声明。这些浏览器会忽略用rem设定的字体大小。下面就是
+</code></pre><p>一个例子：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>:<span class="number">14px</span>; <span class="attribute">font-size</span>:.<span class="number">875rem</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意： </p>
+<pre><code>选择使用什么字体单位主要由你的项目来决定，如果你的用户群都使用最新版的浏览器，那推荐使用rem，如果要考虑兼容性，那就使用px,或者两者同时使用。
+</code></pre><p>在这里为大家提供一个px,em,rem单位转换工具</p>
+<p>地址：<a href="http://pxtoem.com/" target="_blank" rel="external">http://pxtoem.com/</a></p>
 
-              if (n == okNumeber) {
-                  alert(&quot;恭喜你对了&quot;+i+&quot;次&quot;);
-                  break;
-              }
-
-              if (n &lt; okNumeber) {
-                  if(i==5){
-                      alert(&quot;智商低&quot;);
-                      break;
-                  }
-                  alert(&quot;数字过小,第&quot;+i+&quot;次&quot;);
-                }
-      }
-
-      }
-      alert(findNumber());
-</code></pre>
       
     </div>
 
@@ -337,28 +349,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/猜数字/" rel="tag">#猜数字</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/11/前端入门笔记（2）--css/" rel="next" title="前端入门笔记（2）--css">
-                <i class="fa fa-chevron-left"></i> 前端入门笔记（2）--css
+              <a href="/2016/06/12/title- 移动端开发的一些技巧/" rel="next" title="移动端开发的一些技巧">
+                <i class="fa fa-chevron-left"></i> 移动端开发的一些技巧
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/11/前端入门笔记（1）--HTML (2)/" rel="prev" title="前端入门笔记（1）--HTML">
-                前端入门笔记（1）--HTML <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
