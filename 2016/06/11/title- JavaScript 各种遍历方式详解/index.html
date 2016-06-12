@@ -1,0 +1,598 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="标签（空格分隔）： js汇总">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 各种遍历方式详解">
+<meta property="og:url" content="http://yoursite.com/2016/06/11/title- JavaScript 各种遍历方式详解/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="标签（空格分隔）： js汇总">
+<meta property="og:updated_time" content="2016-06-11T06:45:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 各种遍历方式详解">
+<meta name="twitter:description" content="标签（空格分隔）： js汇总">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/11/title- JavaScript 各种遍历方式详解/"/>
+
+  <title> JavaScript 各种遍历方式详解 | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一只努力向上的老猿</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript 各种遍历方式详解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-11T14:45:31+08:00" content="2016-06-11">
+              2016-06-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>标签（空格分隔）： js汇总</p>
+<hr>
+<a id="more"></a>
+<p>为了方便例子讲解，现有数组和json对象如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> demoArr = [<span class="string">'Javascript'</span>, <span class="string">'Gulp'</span>, <span class="string">'CSS3'</span>, <span class="string">'Grunt'</span>, <span class="string">'jQuery'</span>, <span class="string">'angular'</span>];</span><br><span class="line"><span class="keyword">var</span> demoObj = &#123;</span><br><span class="line">    aaa: <span class="string">'Javascript'</span>,</span><br><span class="line">    bbb: <span class="string">'Gulp'</span>,</span><br><span class="line">    ccc: <span class="string">'CSS3'</span>,</span><br><span class="line">    ddd: <span class="string">'Grunt'</span>,</span><br><span class="line">    eee: <span class="string">'jQuery'</span>,</span><br><span class="line">    fff: <span class="string">'angular'</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>for</p>
+<p>可以直接看示例，用得太多了，很简单<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>, len=demoArr.length; i&lt;len; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="comment">// return;   // 函数执行被终止</span></span><br><span class="line">            <span class="comment">// break;    // 循环被终止</span></span><br><span class="line">            <span class="keyword">continue</span>; <span class="comment">// 循环被跳过</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'demo1Arr['</span>+ i +<span class="string">']:'</span> + demo1Arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<p>关于for循环，有一下几点需要注意</p>
+<p>for循环中的i在循环结束之后任然存在与作用域中，为了避免影响作用域中的其他变量，使用函数自执行的方式将其隔离起来()();<br>避免使用for(var i=0; i 的方式，这样的数组长度每次都被计算，效率低于上面的方式。也可以将变量声明放在for的前面来执行，提高阅读性<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>, len = demo1Arr.length;</span><br><span class="line"><span class="keyword">for</span>(; i&lt;len; i++) &#123;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>跳出循环的方式有如下几种<br>return 函数执行被终止<br>break 循环被终止<br>continue 循环被跳过</p>
+<p>完整实例（<a href="https://github.com/yangbo5207/front-end-road/blob/master/16.%E5%90%84%E7%A7%8D%E9%81%8D%E5%8E%86%E8%AF%A6%E8%A7%A3/demo1.html）" target="_blank" rel="external">https://github.com/yangbo5207/front-end-road/blob/master/16.%E5%90%84%E7%A7%8D%E9%81%8D%E5%8E%86%E8%AF%A6%E8%A7%A3/demo1.html）</a></p>
+<p>for in</p>
+<p>for(var item in arr|obj){} 可以用于遍历数组和对象</p>
+<p>遍历数组时，item表示索引值， arr表示当前索引值对应的元素 arr[item]<br>遍历对象时，item表示key值，arr表示key值对应的value值 obj[item]<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> demoArr) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>; <span class="comment">// 函数执行被终止</span></span><br><span class="line">            <span class="comment">// break;  // 循环被终止</span></span><br><span class="line">            <span class="comment">// continue;  // 循环被跳过</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'demoArr['</span>+ i +<span class="string">']:'</span> + demoArr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'-------------'</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<p>关于for in，有以下几点需要注意：</p>
+<p>在for循环与for in循环中，i值都会在循环结束之后保留下来。因此使用函数自执行的方式避免。<br>使用return，break，continue跳出循环都与for循环一致，不过关于return需要注意，在函数体中，return表示函数执行终止，就算是循环外面的代码，也不再继续往下执行。而break仅仅只是终止循环，后面的代码会继续执行。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">res</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> demoArr = [<span class="string">'Javascript'</span>, <span class="string">'Gulp'</span>, <span class="string">'CSS3'</span>, <span class="string">'Grunt'</span>, <span class="string">'jQuery'</span>, <span class="string">'angular'</span>];</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> item <span class="keyword">in</span> demoArr) &#123;</span><br><span class="line">        <span class="keyword">if</span> (item == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="built_in">console</span>.log(item, demoArr[item]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'desc'</span>, <span class="string">'function res'</span>); <span class="comment">//不会执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>forEach</p>
+<p>demoArr.forEach(function(arg) {})<br>参数arg表示数组每一项的元素，实例如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">demoArr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">val, index</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (e == <span class="string">'CSS3'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;  <span class="comment">// 循环被跳过</span></span><br><span class="line">        <span class="comment">// break;   // 报错</span></span><br><span class="line">        <span class="comment">// continue;// 报错</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">console</span>.log(val, index);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>具体有以下需要注意的地方</p>
+<p>回调函数中有2个参数，分别表示值和索引，这一点与jQuery中的$.each相反<br>forEach无法遍历对象<br>forEach无法在IE中使用，firefox和chrome实现了该方法<br>forEach无法使用break，continue跳出循环，使用return时，效果和在for循环中使用continue一致<br>最重要的一点，可以添加第二参数，为一个数组，而且回调函数中的this会指向这个数组。而如果没有第二参数，则this会指向window。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newArr = [];</span><br><span class="line">demoArr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">val, index</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.push(val); <span class="comment">// 这里的this指向newArr</span></span><br><span class="line">&#125;, newArr)</span><br></pre></td></tr></table></figure></p>
+<p>虽然在原生中forEach循环的局限性很多，但是了解他的必要性在于，很多第三方库会扩展他的方法，使其能够应用在很多地方，比如angular的工具方法中，也有forEach方法，其使用与原生的基本没有差别，只是没有了局限性，可以在IE下使用，也可以遍历对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = [];</span><br><span class="line">angular.forEach(demoArr, <span class="function"><span class="keyword">function</span>(<span class="params">val, index</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.push(val);</span><br><span class="line">&#125;, result);</span><br></pre></td></tr></table></figure>
+<p>do/while</p>
+<p>函数具体的实现方式如下，不过有一点值得注意的是，当使用continue时，如果你将i++放在了后面，那么i++的值将一直不会改变，最后陷入死循环。因此使用do/while一定要小心谨慎一点。</p>
+<p>不建议使用do/while的方式来遍历数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>,</span><br><span class="line">        len = demoArr.length;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; len) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="comment">// return; // 函数执行被终止</span></span><br><span class="line">            <span class="comment">// break;  // 循环被终止</span></span><br><span class="line">            <span class="comment">// continue;  // 循环将被跳过，因为后边的代码无法执行，i的值没有改变，因此循环会一直卡在这里，慎用！！</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'demoArr['</span>+ i +<span class="string">']:'</span> + demoArr[i]);</span><br><span class="line">        i ++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'------------------------'</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<p>// 直接使用while</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// do while</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span>,</span><br><span class="line">        len = demo3Arr.length;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>; <span class="comment">// 循环被终止</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'demo2Arr['</span>+ i +<span class="string">']:'</span> + demo3Arr[i]);</span><br><span class="line">        i++;</span><br><span class="line">    &#125; <span class="keyword">while</span>(i&lt;len);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p>$.each</p>
+<p>$.each(demoArr|demoObj, function(e, ele))<br>可以用来遍历数组和对象，其中e表示索引值或者key值，ele表示value值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$.each(demoArr, <span class="function"><span class="keyword">function</span>(<span class="params">e, ele</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e, ele);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">输出为</span><br><span class="line"></span><br><span class="line"><span class="number">0</span> <span class="string">"Javascript"</span></span><br><span class="line"><span class="number">1</span> <span class="string">"Gulp"</span></span><br><span class="line"><span class="number">2</span> <span class="string">"CSS3"</span></span><br><span class="line"><span class="number">3</span> <span class="string">"Grunt"</span></span><br><span class="line"><span class="number">4</span> <span class="string">"jQuery"</span></span><br><span class="line"><span class="number">5</span> <span class="string">"angular"</span></span><br></pre></td></tr></table></figure></p>
+<p>这里有很多需要注意的地方</p>
+<p>使用return 或者return true为跳过一次循环，继续执行后面的循环<br>使用return false为终止循环的执行，但是并不终止函数执行<br>无法使用break与continue来跳过循环<br>循环中this值输出类似如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"><span class="comment">//String &#123;0: "C", 1: "S", 2: "S", 3: "3", length: 4, [[PrimitiveValue]]: "CSS3"&#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span> == ele);</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">关于上面的<span class="keyword">this</span>值，遍历一下</span><br><span class="line"></span><br><span class="line">$.each(<span class="keyword">this</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e, ele</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e, ele);</span><br><span class="line">&#125;)</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 0 c</span></span><br><span class="line"><span class="comment">// 1 s</span></span><br><span class="line"><span class="comment">// 2 s</span></span><br><span class="line"><span class="comment">// 4 3</span></span><br></pre></td></tr></table></figure></p>
+<p>为什么length 和 [[PrimitiveValue]]没有遍历出来？突然灵光一动，在《javascript高级编程》中找到了答案，大概意思就是javascript的内部属性中，将对象数据属性中的Enumerable设置为了false<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查看length的内部属性</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyDescriptor(<span class="keyword">this</span>, <span class="string">'length'</span>));</span><br><span class="line"><span class="comment">// Object &#123;value: 4, writable: false, enumerable: false, configurable: false&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>$.each 中的 $(this) 与this有所不同，不过遍历结果却是一样，你可以在测试代码中打印出来看看</p>
+<p>$(selecter).each</p>
+<p>专门用来遍历DOMList<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.list li'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i, ele</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i, ele);</span><br><span class="line">    <span class="comment">// console.log(this == ele); // true</span></span><br><span class="line">    $(<span class="keyword">this</span>).html(i);</span><br><span class="line">    <span class="keyword">if</span> ($(<span class="keyword">this</span>).attr(<span class="string">'data-item'</span>) == <span class="string">'do'</span>) &#123;</span><br><span class="line">        $(<span class="keyword">this</span>).html(<span class="string">'data-item: do'</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>i: 序列值 ele: 只当前被遍历的DOM元素<br>this 当前被遍历的DOM元素，不能调用jQuery方法<br>$(this) == $(ele) 当前被遍历元素的jquery对象，可以调用jquery的方法进行dom操作</p>
+<p>使用for in 遍历DOMList</p>
+<p>因为domList并非数组，而是一个对象，只是因为其key值为0，1，2… 而感觉与数组类似，但是直接遍历的结果如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> domList = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'its'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> item <span class="keyword">in</span> domList) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item, <span class="string">':'</span> + domList[item]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 0: </span></span><br><span class="line"><span class="comment">// 1: </span></span><br><span class="line"><span class="comment">//    ...</span></span><br><span class="line"><span class="comment">// length: 5</span></span><br><span class="line"><span class="comment">// item: function item() &#123;&#125;</span></span><br><span class="line"><span class="comment">// namedItem: function namedItem() &#123;&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>因此我们在使用for in 遍历domList时，需要将domList转换为数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> res = [].slice.call(domList);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> item <span class="keyword">in</span> res) &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>类似这样的对象还有函数的属性arguments对象，当然字符串也是可以遍历的，但是因为字符串其他属性的enumerable被设置成了false，因此遍历出来的结果跟数组是一样的，也就不用担心这个问题了.</p>
+<p>小补充</p>
+<p>如果你发现有些人写函数这样搞，不要惊慌，也不要觉得他高大上鸟不起<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+<span class="function"><span class="keyword">function</span>(<span class="params">ROOT, Struct, undefined</span>) </span>&#123;</span><br><span class="line">    ... </span><br><span class="line">&#125;(<span class="built_in">window</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">()(), !<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;() +<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;() 三种函数自执行的方式^_^</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/11/前端入门笔记（1）--HTML (2)/" rel="next" title="前端入门笔记（1）--HTML">
+                <i class="fa fa-chevron-left"></i> 前端入门笔记（1）--HTML
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/11/title- 『引』最全前端资源汇集/" rel="prev" title="『引』最全前端资源汇集">
+                『引』最全前端资源汇集 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="H5 Monkey" />
+          <p class="site-author-name" itemprop="name">H5 Monkey</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">H5 Monkey</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

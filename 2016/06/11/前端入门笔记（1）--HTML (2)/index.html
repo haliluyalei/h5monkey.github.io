@@ -1,0 +1,633 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端,入门,HTML," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="初识前端，凭着脑中模糊的前端映像，凭着网络搜索的“只言片语”，我将在这条路上渐行渐远。随着学习的深入，总觉着该写些什么，内容不多只言片语，闲暇时翻来看看未尝不是一件令人欣慰的事。我的前端笔记将随着课程的进度逐渐展开，以下内容纯属个人理解，如有异议欢迎辅正。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端入门笔记（1）--HTML">
+<meta property="og:url" content="http://yoursite.com/2016/06/11/前端入门笔记（1）--HTML (2)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="初识前端，凭着脑中模糊的前端映像，凭着网络搜索的“只言片语”，我将在这条路上渐行渐远。随着学习的深入，总觉着该写些什么，内容不多只言片语，闲暇时翻来看看未尝不是一件令人欣慰的事。我的前端笔记将随着课程的进度逐渐展开，以下内容纯属个人理解，如有异议欢迎辅正。">
+<meta property="og:updated_time" content="2016-06-10T16:56:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端入门笔记（1）--HTML">
+<meta name="twitter:description" content="初识前端，凭着脑中模糊的前端映像，凭着网络搜索的“只言片语”，我将在这条路上渐行渐远。随着学习的深入，总觉着该写些什么，内容不多只言片语，闲暇时翻来看看未尝不是一件令人欣慰的事。我的前端笔记将随着课程的进度逐渐展开，以下内容纯属个人理解，如有异议欢迎辅正。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/11/前端入门笔记（1）--HTML (2)/"/>
+
+  <title> 前端入门笔记（1）--HTML | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一只努力向上的老猿</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                前端入门笔记（1）--HTML
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-11T00:56:57+08:00" content="2016-06-11">
+              2016-06-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>初识前端，凭着脑中模糊的前端映像，凭着网络搜索的“只言片语”，我将在这条路上渐行渐远。随着学习的深入，总觉着该写些什么，内容不多只言片语，闲暇时翻来看看未尝不是一件令人欣慰的事。我的前端笔记将随着课程的进度逐渐展开，以下内容纯属个人理解，如有异议欢迎辅正。<a id="more"></a></p>
+<p><strong>1.w3c标准和html语义化。</strong><br>网页由三部分组成：结构、表现、行为；</p>
+<p>对应的标准也分为三个方面：结构化标准：xhtml和xml网页元素内容；表现标准：CSS控制网页样式；行为标准：ECMAScript, DOM, BOM操作网页内容，实现功能或者效果。</p>
+<p>html语义化：选择合适的标签，使用合理的代码结构，便于开发者阅读，让浏览器爬虫和机器能更好的解析，有利于搜索引擎的抓取。</p>
+<p>优点 1. 去掉或者丢失样式的时候能够让页面呈现出清晰的结构； 2. 有利于SEO和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息（爬虫依赖于标签来确定上下文和各个关键字的权重）； 3. 方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页； 4. 便于团队开发和维护，语义化更具可读性，遵循W3C标准的团队都遵循这个标准，可以减少差异化。</p>
+<p><strong>2.头部标签。</strong><br>Doctype:用于声明文档使用规范；告知浏览器文档使用哪种 HTML 或 XHTML 规范。</p>
+<p>meta：提供有关页面的元信息。</p>
+<p>.<meta name="description" content=" ">定义描述内容，显示在搜索页面标题下方的一段文字</p>
+<p>.<meta name="keyword" content=" ">定义关键字，用来描述网站相关内容，便于网络爬虫的抓取。</p>
+<p>.<meta http-equiv="Cache-Control" content="no-cache">防止网页缓存到本地</p>
+<p>title：定义页面标题。</p>
+<p><strong>3.常见的浏览器及其内核。</strong></p>
+<p>使用Gecko内核的浏览器：Netcape6及以上版本、FireFox、MozillaSuite/SeaMonkey；</p>
+<p>使用Presto内核的浏览器：Opera7及以上版本；</p>
+<p>使用Webkit内核的浏览器：Safari、Chrome、360的极速模式等、搜狗浏览器。</p>
+<p><strong>4.关于src、url的用处和alt、title的区别。</strong></p>
+<p>url：用于css样式中background-image属性的地址链接；</p>
+<p>src：用于html中<img>标签的地址链接；</p>
+<p>alt：用于图片标签中网上过慢图片加载慢时的图片占位解释字；</p>
+<p>title：用于鼠标放上时显示的提示框。</p>
+<p><strong>5.块级元素和行内元素。</strong></p>
+<p>块级元素占用空间是一整行，行内元素占用空间是它自身的内容宽度。行内元素可以一并排显示，块级元素不能。</p>
+<p>行内元素：a、span、img、input、button、em、textarea</p>
+<p>.设置宽度width  无效。</p>
+<p>•设置高度height  无效，可以通过line-height来设置。</p>
+<p>•设置margin 只有左右margin有效，上下无效。</p>
+<p>•设置padding 只有左右padding有效，上下则无效。注意元素范围是增大了，但是对元素周围的内容是没影响的。</p>
+<p>行内元素和块级元素之间的转换：</p>
+<p>.display：block  将行内元素转化为块级元素，拥有块级元素的属性；</p>
+<p>.display:inline-block 将行内元素转换为行内块元素，拥有行内元素和块级元素的所有属性。</p>
+<p><strong>6.浏览器标准模式、怪异模式及标准盒模型、怪异盒模型。</strong></p>
+<p>怪异模式：使用浏览器自己的方式解析执行代码，页面以一种比较宽松的向后兼容（高版本可以兼容低版本）的方式显示。因为不同浏览器解析执行的方式不一样，所以我们称之为怪异模式；</p>
+<p>标准盒模型：实际的宽/高 = width/height + 2padding + 2border；</p>
+<p>怪异盒模型: width/height就是该盒子的大小，是包含内边距padding和边框border宽度在内的，即实际宽/高=width/height=2padding+2border+content(这种情况发生在html文档中没有文档声明的情况下)</p>
+<p><strong>7.表单提交中，get方式和post方式的区别。</strong></p>
+<p>.get提交的数据在浏览器历史记录中，安全性不好。</p>
+<ol>
+<li><p>无法使用缓存文件（更新服务器上的文件或数据库）</p>
+</li>
+<li><p>向服务器发送大量数据（POST 没有数据量限制）</p>
+</li>
+<li><p>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</p>
+</li>
+</ol>
+<p><strong>8.px、em、rem的区别。</strong></p>
+<p>.Em：em是相对长度单位。相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸:1. em的值并不是固定的；2. em会继承父级元素的字体大小。</p>
+<p>.Rem：相对的只是HTML根元素。它可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。</p>
+<p><strong>9.从输入url到页面呈现的过程。</strong></p>
+<p>.url到IP：DNS解析过程：域名解析服务器指向对应的主机的IP地址    。浏览器查缓存→系统缓存→路由器缓存→服务商缓存→根服务器缓存（目的：通过URL定位到IP地址找到主机）；</p>
+<p>.打包http请求：浏览器打包服务器所需信息；</p>
+<p>.创建tcp协议(浏览器向服务器发出请求)；</p>
+<p>.浏览器发送相关信息至服务器；</p>
+<p>.相关进程处理请求：服务器通过端口号确定哪个进程处理该请求；</p>
+<p>.服务器响应请求；</p>
+<p>.服务器响应内容后传递给浏览器；</p>
+<p>.浏览器拿到内容后进行下载和页面渲染。</p>
+<ol>
+<li><p>浏览器与远程 Web 服务器通过 TCP 三次握手协商来建立一个 TCP/IP 连接。该握手包括一个同步报文，一个同步-应答报文和一个应答报文，这三个报文在 浏览器和服务器之间传递。该握手首先由客户端尝试建立起通信，而后服务器应答并接受客户端的请求，最后由客户端发出该请求已经被接受的报文。</p>
+</li>
+<li><p>一旦 TCP/IP 连接建立，浏览器会通过该连接向远程服务器发送 HTTP 的 GET 请求。远程服务器找到资源并使用 HTTP 响应返回该资源，值为 200 的 HTTP 响应状态表示一个正确的响应。</p>
+</li>
+<li><p>此时，Web 服务器提供资源服务，客户端开始下载资源。</p>
+</li>
+</ol>
+<p>请求返回后，便进入了我们关注的前端模块</p>
+<p>简单来说，浏览器会解析 HTML 生成 DOM Tree，其次会根据 CSS 生成 CSS Rule Tree，而 javascript 又可以根据 DOM API 操作 DOM</p>
+<p><strong>三次握手：</strong></p>
+<p>1.浏览器向服务器发出请求并发送相关信息；</p>
+<p>2.服务器收到信息后进行确认，并返回信息至浏览器；</p>
+<p>3.浏览器收到返回信息后进行确认。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端-入门-HTML/" rel="tag">#前端,入门,HTML</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/11/猜数字/" rel="next" title="猜数字小习题">
+                <i class="fa fa-chevron-left"></i> 猜数字小习题
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/11/title- JavaScript 各种遍历方式详解/" rel="prev" title="JavaScript 各种遍历方式详解">
+                JavaScript 各种遍历方式详解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="H5 Monkey" />
+          <p class="site-author-name" itemprop="name">H5 Monkey</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">H5 Monkey</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

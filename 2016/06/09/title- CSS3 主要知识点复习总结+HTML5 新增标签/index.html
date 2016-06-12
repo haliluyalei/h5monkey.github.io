@@ -1,0 +1,622 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="1、显示属性，自身属性，文本属性推荐样式编写顺序    1 显示属性 ：display，list-style，position，float，clear [注意按照横着的顺序]    2 自身属性（合模型）：width，height，margin，padding，border，background（第3点）    3 背景：background    4 行高：line-height    5 文本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3 主要知识点复习总结+HTML5 新增标签">
+<meta property="og:url" content="http://yoursite.com/2016/06/09/title- CSS3 主要知识点复习总结+HTML5 新增标签/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、显示属性，自身属性，文本属性推荐样式编写顺序    1 显示属性 ：display，list-style，position，float，clear [注意按照横着的顺序]    2 自身属性（合模型）：width，height，margin，padding，border，background（第3点）    3 背景：background    4 行高：line-height    5 文本">
+<meta property="og:updated_time" content="2016-06-09T09:36:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3 主要知识点复习总结+HTML5 新增标签">
+<meta name="twitter:description" content="1、显示属性，自身属性，文本属性推荐样式编写顺序    1 显示属性 ：display，list-style，position，float，clear [注意按照横着的顺序]    2 自身属性（合模型）：width，height，margin，padding，border，background（第3点）    3 背景：background    4 行高：line-height    5 文本">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/09/title- CSS3 主要知识点复习总结+HTML5 新增标签/"/>
+
+  <title> CSS3 主要知识点复习总结+HTML5 新增标签 | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一只努力向上的老猿</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS3 主要知识点复习总结+HTML5 新增标签
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-09T17:36:46+08:00" content="2016-06-09">
+              2016-06-09
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>1、显示属性，自身属性，文本属性<br>推荐样式编写顺序<br>    1 显示属性 ：display，list-style，position，float，clear [注意按照横着的顺序]<br>    2 自身属性（合模型）：width，height，margin，padding，border，background（第3点）<br>    3 背景：background<br>    4 行高：line-height<br>    5 文本属性：color,font，text-decoration，text-align，vertical-align，white-space，content<br>    6 其他 cursor/z-index/zoom<br>    7 css3属性：trandsform/transition/animation/box-shadow/border-radius<br>    8 链接的样式请严格按照如下顺序添加：<br>      a:link–&gt;a:visited–&gt;a:hover–&gt;a:active(LoVeHAte)</p>
+<ul>
+<li>书写的CSS代码的时候请注意按照显示 自身 文本的书写顺序来书写！<a id="more"></a>
+</li>
+</ul>
+<hr>
+<p>2、CSS3属性（内核前缀）<br>Mozilla 内核   css前缀-moz;<br>WebKit  内核   css前缀-webkit ;（谷歌已换用blink内核）<br>Opera   内核   css前缀 -o ;    （欧朋已换用blink内核）<br>Trident 内核   css前缀 -ms ; </p>
+<p>CSS3新属性：</p>
+<p>1）边框<br>① border-colors<br>相关属性 border-top-colors  border-right-colors  border-bottom-colors  border-left-colors<br>② border-image  ：<br>stretch 拉伸方式来填充边框背景图 |<br>repeat 平铺 图片碰到边界时超出截断 |<br>round 平铺，图片会工具边框的尺寸动态调整图片大小直至刚 好铺满整个边框<br>③ border-radius  相关属性  border-radius: 1-4 length | % / 1<br>   border-radius数值为合模型的一半就变成圆 ，记住：不是相对于合模型的width（如：965x1611），<br>    而是整个框才是</p>
+<p>2）阴影</p>
+<p>1.文本阴影 text-shadow（不需要判断浏览器）</p>
+<p>text-shadow:2px 3px 2px #000;<br>文字阴影的结构是按照以下顺序：X–偏移，Y–偏移，模糊，和颜色;</p>
+<p>text-shadow:-2px -3px 2px rgba(0, 118, 160, .25);<br>设置为负值，X -偏移阴影转移到左侧。设置为负值偏移Y -转移阴影顶端。颜色可以用RGBA值。</p>
+<p>text-shadow:0px 1px 0px #fff,0px -p1x 0px #000；<br>文字阴影的列表（以逗号分隔）,1px的顶部和底部1px的阴影。</p>
+<p>text-shadow：水平偏移量 垂直偏移量 阴影模糊值 颜色，<br>               水平偏移量 垂直偏移量 阴影模糊值 颜色；（多个阴影用，隔开）<br>2.盒阴影 box-shadow（不需要判断浏览器）</p>
+<p>  盒阴影的使用语法结构与文本阴影类似，如box-shadow: 5px 5px 5px rgba(255,15,255,0.5);<br>  但是，盒阴影多了个属性：外延值，inset，<br>  如box-shadow: 5px 5px 25px rgba(0,0,255,0.5) inset;</p>
+<ol>
+<li>CSS3渐变  css3实现背景颜色线性渐变</li>
+</ol>
+<pre><code>div{
+    width:500px;
+    border:1px solid #FA0;
+    background:-webkit-linear-gradient(left,#f00,#ff0 25%,#0ff 55%,#00f 70%,#f00);     /*横向渐变*/
+    background:-webkit-gradient-gradient(left,#f00,#ff0 25%,#0ff 55%,#00f 70%,#f00); /*纵向渐变*/
+    -webkit-background-clip:text;
+ /*只有webkit内核支持text的剪切模式*/
+    color:transparent;
+  }
+</code></pre><ol>
+<li><p>CSS3倒影 -webkit-box-reflect<br> 1.方向 -webkit-box-reflect:  below/above/left/right<br> 2.距离<br> 3.透明度<br>   -webkit-box-reflect: below 10px -webkit-linear-gradient(top,rgba(0,0,0,0) 20%,</p>
+<pre><code>rgba(0,0,0,0.6) 100%)
+</code></pre><p>★4）CSS3变形transform </p>
+</li>
+</ol>
+<hr>
+<p>  二，三维变形的变形方式：四种方法<br>  旋转——缩放——平移——扭曲<br>旋转（1个值）    缩放（1个值）    平移（2个值）    扭曲（2个值）<br>rotate</p>
+<p>rotate（30deg）     scale</p>
+<p>可以取值正，负，小数    translate<br>translate（x,y）   针对2D平面平移</p>
+<p>skew</p>
+<p>  rotateX(30deg);<br>  rotateY(30deg);<br>  rotateZ(30deg);<br>   缩放的值，X为负时，字体先沿Y轴翻转再缩放<br>   缩放的值，Y为负时，字体先沿X轴翻转再缩放</p>
+<pre><code>translateX   translateY
+</code></pre><p>  skew(30deg,15deg);<br>  skewX(30deg);<br>  skewY(15deg);</p>
+<p>旋转：-webkit-transform: rotate(120deg);<br>平移：-webkit-transform: translate(20px, 10px);  -moz-transform: translateX(20px);<br>缩放：-webkit-transform: scale(1.1,0.5); X方向缩放1.1倍，Y方向缩放0.5倍<br>★① scale(1,1);   ② scale(-1,1);   ③scale(1,-1);  ④scale(-1,-1);等价scale(-1); </p>
+<p>① transform：变形种类；的名称（对应的属性值），多个种类之间使用空格分隔。一个（）中的属性值之间用逗号分隔。<br>② 二维平面的旋转，旋转围绕点进行，而旋转正方向默认为顺时针方向<br>③ 默认的旋转中心就是这个块的正中心，可以通过transform-origin去改变旋转中心，通过left top、数值、百分比改变旋转中心<br>④ scale(<number>[, <number>]);表示使元素在X轴和Y轴同时缩放。<number>表示缩放倍数，可以是正数，负数和小数。负数是先翻转元素然后再缩放。包含两个参数，如果缺少第二个参数，那么第二个参数的值等于第一个参数。<br>   scaleX(<number>):表示只在X轴(水平方向)缩放元素。<br>   scaleY(<number>):表示只在Y轴(垂直方向)缩放元素。<br>   scaleZ(<number>):表示只在Z轴缩放元素。前提是元素本身或者元素的父元素设定了透视值（perspective：100;）<br>5.视角：-webkit-persepective：0；<br>      0没设置 （值） 800px;  通常在body元素下<br>  CSS3 perspective属性： 目前浏览器都不支持 perspective 属性。 Chrome 和 Safari 支持替代的 -webkit-perspective 属性。</number></number></number></number></number></number></p>
+<hr>
+<ol>
+<li>backface-visibility: visible | hidden;  定义当元素不面向屏幕时是否可见。可用在扑克牌旋转上。</li>
+</ol>
+<p>【W3CSchool资料】<br>matrix3d(n,n,n,n,n,n, n,n,n,n,n,n,n,n,n,n)</p>
+<p>定义3D转换，使用16个值的4x4矩阵。<br>translate3d(x,y,z)<br>定义3D转化。<br>translateX(x)<br>定义3D转化，仅使用用于X轴的值。<br>translateY(y)<br>定义3D转化，仅使用用于Y轴的值。<br>translateZ(z)<br>定义3D转化，仅使用用于Z轴的值。<br>scale3d(x,y,z)<br>定义3D缩放转换。<br>scaleX(x)<br>定义3D缩放转换，通过给定一个X轴的值。<br>scaleY(y)<br>定义3D缩放转换，通过给定一个Y轴的值。<br>scaleZ(z)<br>定义3D缩放转换，通过给定一个Z轴的值。<br>rotate3d(x,y,z,angle)<br>定义3D旋转。<br>rotateX(angle)<br>定义沿X轴的3D旋转。<br>rotateY(angle)<br>定义沿Y轴的3D旋转。<br>rotateZ(angle)<br>定义沿Z轴的3D旋转。<br>perspective(n)<br>定义3D转换元素的透视视图。<br>★ 7）CSS3过渡 trabsition<br>参与过渡的属性、过渡时间、过渡方式（动画类型） 延迟时间 【需要写前缀】<br>一般情况下，transition添加在基本效果上，而不是hover效果中。css原状态和hover状态设置为两种不同的样式，然后通过CSS3过渡进行‘渐变’处理padding、color所有浏览器都支持渐变</p>
+<p>transition 属性是一个简写属性，用于设置四个过渡属性：</p>
+<p>transition-property  哪个属性实现过渡如：width<br>transition-duration  完成过渡效果需要多少秒/毫秒<br>transition-timing-function  速度效果的运动曲线，如linear 、ase-in 、ease 、 ease-out 、ease-in-out 、 cube-bezier（贝塞尔曲线）<br>transition-delay  规定过渡开始前等待几秒<br>简写：transition：width 2s ease；</p>
+<p>★ 8）CSS3动画 animation<br>animation基本参数与transition完全相同，第一个参数表示的是调用哪个动画 infinite 表示无限循环<br>.wrap {<br>   height:100px;<br>   margin:10px;<br>   -webkit-animation:colorChange 10s linear 1.5s infinite;<br>}<br>@-webkit-keyframes colorChange {<br>      0%{ background:#f00;}<br>      10%{ background:#ff0;}<br>}</p>
+<p>animation属性值：<br>@keyframes<br>规定动画。<br>animation<br>所有动画属性的简写属性，除了animation-play-state 属性。<br>animation-name<br>规定 @keyframes 动画的名称。<br>animation-duration<br>规定动画完成一个周期所花费的秒或毫秒。默认是 0。<br>animation-timing-function<br>规定动画的速度曲线。默认是 “ease”。</p>
+<p>规定动画何时开始。默认是 0。<br>animation-iteration-count<br>规定动画被播放的次数。默认是 1。<br>animation-direction<br>规定动画是否在下一周期逆向地播放。默认是 “normal” 。逆向alternate<br>animation-play-state<br>规定动画是否正在运行或暂停。默认是 “running”，暂停时pause<br>animation-fill-mode<br>规定对象动画时间之外的状态。</p>
+<p>★CSS3过渡与动画的区别：<br> transition  animation<br>1、animation多两个参数，循环和动画的方式<br>2、transition不能自行触发，通过hover等动作或结合JS进行触发。anmiation可以自行运行。<br>3、transition可控性较弱，只能指定起始状态和结束状态，而animation可以定义多个关键帧。<br>4、动画在运行结束之后，需要回到初始状态<br>5、transition的作用，可以用一句话来概括，‘平滑’改变CSS样式</p>
+<p>9.HTML5新增加标签：</p>
+<p>优势：① 语义性好 少类名  有利于SEO  代码少<br>      ②  文档易读 、搜索引擎能够更好的理解页面中的内容、作为开发者，能够更快更准确的搜索到信息</p>
+<p>①&lt;新增标签&gt;<br>article 定义文章 代表文档、页面或者应用程序中独立、完整、可以独自被外部引用的内容<br>header 定义页眉                    aside 定义文章的侧边栏<br>figure一组媒体对象的以及文字       nav定义导航<br>figcaption定义figure的标题         section定义文档中的区段<br>footer定义页脚                     time定义日期和时间<br>vidio 定义视频                     canvas 定义图形，提供画布<br>audio定义音频                      command表示命令按钮<br>embed插入各种多媒体                details表示用户要求得到并可以得到的详细信息<br>mark定义需要突出显示或者高亮的文本 wbr表示软换行<br>progress显示js中耗费的函数进程     hgroup定义对网页标题的组合 </p>
+<p>②新增的input元素类型</p>
+<p><email>  输入E-mail地址的文本输入框</email></p>
+<p><url>    输入URL地址</url></p>
+<p><number> 输入数值的文本输入框</number></p>
+<p><range>  表示必须输入一定范围内的数字值的文本输入框<br>artical：定义文章 代表文档、页面或者应用程序中独立、完整、可以独自被外部引用的内容<br>section：用于对网站或应用程序中的页面上的内容进行分块，一个section元素通常由内容以及标题组成。但section元素并非一个普通的容器元素；当一个容器需要被直接定义样式或通过脚本定义行为时，推荐使用div而非section元素。</range></p>
+<hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/09/helloword/" rel="next" title="“种一棵树最好的时间是十年前，而后是现在”">
+                <i class="fa fa-chevron-left"></i> “种一棵树最好的时间是十年前，而后是现在”
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/09/title- 对比jQuery和AngularJS的不同思维模式/" rel="prev" title="对比jQuery和AngularJS的不同思维模式">
+                对比jQuery和AngularJS的不同思维模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="H5 Monkey" />
+          <p class="site-author-name" itemprop="name">H5 Monkey</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">H5 Monkey</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

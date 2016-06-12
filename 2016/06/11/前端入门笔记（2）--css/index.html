@@ -1,0 +1,707 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css,入门," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="零零碎碎的东西太多，需要理解的东西也不少。有个好的导师真的是一件特别幸福的事，对于初入门的人，面对搜索的各种答案真的会凌乱，待基础打好后再来看一些深入的东西应该会得心应手了吧~学习过程中努力搞清楚的知识点，在这里留下一点印记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端入门笔记（2）--css">
+<meta property="og:url" content="http://yoursite.com/2016/06/11/前端入门笔记（2）--css/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="零零碎碎的东西太多，需要理解的东西也不少。有个好的导师真的是一件特别幸福的事，对于初入门的人，面对搜索的各种答案真的会凌乱，待基础打好后再来看一些深入的东西应该会得心应手了吧~学习过程中努力搞清楚的知识点，在这里留下一点印记。">
+<meta property="og:image" content="http://yoursite.com/./images/766267-b4fbe2ab92e1bc62.png">
+<meta property="og:image" content="http://yoursite.com/./images/hezi2.png">
+<meta property="og:updated_time" content="2016-06-10T16:56:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端入门笔记（2）--css">
+<meta name="twitter:description" content="零零碎碎的东西太多，需要理解的东西也不少。有个好的导师真的是一件特别幸福的事，对于初入门的人，面对搜索的各种答案真的会凌乱，待基础打好后再来看一些深入的东西应该会得心应手了吧~学习过程中努力搞清楚的知识点，在这里留下一点印记。">
+<meta name="twitter:image" content="http://yoursite.com/./images/766267-b4fbe2ab92e1bc62.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/11/前端入门笔记（2）--css/"/>
+
+  <title> 前端入门笔记（2）--css | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一只努力向上的老猿</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                前端入门笔记（2）--css
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-11T00:56:31+08:00" content="2016-06-11">
+              2016-06-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>零零碎碎的东西太多，需要理解的东西也不少。有个好的导师真的是一件特别幸福的事，对于初入门的人，面对搜索的各种答案真的会凌乱，待基础打好后再来看一些深入的东西应该会得心应手了吧~学习过程中努力搞清楚的知识点，在这里留下一点印记。<br><a id="more"></a></p>
+<hr>
+<p><strong>1.选择器的权重问题。</strong></p>
+<p>以以下一小段代码为例：</p>
+<pre><code>&lt;div class=&quot;cla1&quot;&gt;
+
+&lt;p id=&quot;id1&quot; class=&quot;cla2&quot;&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</code></pre><p>选择排序如下：</p>
+<p>#id1 &gt;  .cla1 .cla2 &gt; .cla2 &gt;div p</p>
+<p><strong>2.图片的放入位置。</strong></p>
+<p>css中：图片为固定的图片，不会因为操作人的不同或内容更新而更换的放在css的background中；</p>
+<p>html中：图片与部分内容相关，会时时更新的则放在html的<img>标签中，由后台的数据库调出。</p>
+<p><strong>3.文本和图像的居中问题。</strong></p>
+<p>文本水平居中:text-align:center;</p>
+<p>文本垂直居中：1.设置line-height=height；2.设置上下padding相等；</p>
+<p>图像水平居中：margin：0 auto；</p>
+<p>图像垂直居中（item为父容器的class）：</p>
+<p>.方式1：给img的父容器设置成表格方式，加入vertical-align: middle;具体如下：</p>
+<pre><code>.item{
+
+width: 400px;
+
+height: 300px;
+
+border: 1px solid red;
+
+margin: 0 auto;
+
+text-align: center;
+
+display: table-cell;
+
+vertical-align: middle;
+
+}
+</code></pre><p>.方式2,：</p>
+<pre><code>.item{
+
+width: 400px;
+
+height: 300px;
+
+border: 1px solid red;
+
+text-align: center;
+
+}
+
+.item:before{
+
+content: &apos;&apos;;
+
+display:inline-block;
+
+height: 100%;
+
+vertical-align: middle;
+
+}
+
+.item img{
+
+vertical-align: middle;
+
+}
+</code></pre><p><strong>4.display:none、visibility:hidden区别及overflow属性。</strong></p>
+<p>display：none  对应元素脱离文档流，不显示；</p>
+<p>visibility:hidden 对应元素不显示，但是占据文档空间，相当于opacity：0；</p>
+<p>overflow：scroll，必会出现滚动条；auto，子元素内容大于父元素时出现滚动条；visible，溢出的内容出现在父元素之外；hidden，溢出隐藏。</p>
+<p><strong>5.盒模型。</strong></p>
+<p>标准盒模型：<br><img src="./images/766267-b4fbe2ab92e1bc62.png" alt="enter description here" title="766267-b4fbe2ab92e1bc62.png"></p>
+<p>怪异盒模型（ie下）：<br><img src="./images/hezi2.png" alt="enter description here" title="hezi2.png"></p>
+<p><strong>6.css定位机制（position、float）。</strong></p>
+<p>position：static 默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）；</p>
+<p>position：relative 相对于自身的正常位置进行定位；</p>
+<p>position：absolute 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。以top、right、bottom、left进行定位。</p>
+<p>position：fixed  生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</p>
+<p>float：使浮动框脱离文档流，若该元素的兄弟元素都是浮动元素，且父元素未设置宽高，则父元素无法被撑开。要使其正常出现，则需为父元素设置宽高或清除浮动。</p>
+<p><strong>7.清除浮动的几种方法。</strong></p>
+<p>方法一：在父元素的最后添加一个无意义的元素</p>
+<pre><code>.clearfix:after{
+
+content: &quot;&quot;;
+
+display: block;
+
+clear: both;
+
+}
+</code></pre><p>方法二：为父元素添加overflow:hidden;</p>
+<pre><code>.clearfix{
+
+overflow:hidden;
+
+_zoom:1; /* for ie 6*/
+
+}
+</code></pre><p><strong>8.简述两种css布局。</strong></p>
+<p>布局一：三列并排等高显示（利用超大内边距和相同的负外边距）</p>
+<p>布局二：侧边栏宽度固定，内容部分宽度自适应。</p>
+<p><strong>9.页面渲染。</strong></p>
+<p>页面渲染从上到下进行：</p>
+<p>css放在html标签的头部：页面加载从上到下，先加载出css再加载html，防止html加载出来样式却还未加载出来，页面呈现不带样式的html；</p>
+<p>js放在body尾部：js执行功能，最后加载可以加快页面的出现速度；同时，js是针对页面节点进行操作，必须保证页面节点都已经存在。</p>
+<p><strong>10.为什么要初始化css样式</strong></p>
+<p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。</p>
+<pre><code>{padding: 0; margin: 0;}
+</code></pre><p><em>淘宝的样式初始化：</em></p>
+<pre><code>body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+
+address, cite, dfn, em, var { font-style:normal; }
+
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+
+small{ font-size:12px; }
+
+ul, ol { list-style:none; }
+
+a { text-decoration:none; }
+
+a:hover { text-decoration:underline; }
+
+sup { vertical-align:text-top; }
+
+sub{ vertical-align:text-bottom; }
+
+legend { color:#000; }
+
+fieldset, img { border:0; }
+
+button, input, select, textarea { font-size:100%; }
+
+table { border-collapse:collapse; border-spacing:0; }
+</code></pre><p><strong>10.什么是css sprite。</strong></p>
+<p>CSS Sprites 其实就是把网页中一些背景图片整合到一张图片文件中，再利用 CSS 的”background-image”，”background-repeat”，”background-position” 的组合进行背景定位，background-position 可以用数字能精确的定位出背景图片的位置。这样可以减少很多图片请求的开销。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css-入门/" rel="tag">#css,入门</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/11/js获取小数点后2位数字方法/" rel="next" title="用JS获取小数点后两位数字方法">
+                <i class="fa fa-chevron-left"></i> 用JS获取小数点后两位数字方法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/11/猜数字/" rel="prev" title="猜数字小习题">
+                猜数字小习题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="H5 Monkey" />
+          <p class="site-author-name" itemprop="name">H5 Monkey</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">H5 Monkey</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,851 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="标签（空格分隔）： js汇总
+
+汇总了平时一些经常碰到的算法，集合起来算是给自己一个备忘的地方。随着知识的增加再继续增加。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见算法是js实现汇总（1）">
+<meta property="og:url" content="http://yoursite.com/2016/06/10/title- 常见算法是js实现汇总（1）/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="标签（空格分隔）： js汇总
+
+汇总了平时一些经常碰到的算法，集合起来算是给自己一个备忘的地方。随着知识的增加再继续增加。">
+<meta property="og:updated_time" content="2016-06-10T04:24:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常见算法是js实现汇总（1）">
+<meta name="twitter:description" content="标签（空格分隔）： js汇总
+
+汇总了平时一些经常碰到的算法，集合起来算是给自己一个备忘的地方。随着知识的增加再继续增加。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/10/title- 常见算法是js实现汇总（1）/"/>
+
+  <title> 常见算法是js实现汇总（1） | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一只努力向上的老猿</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                常见算法是js实现汇总（1）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-10T12:24:10+08:00" content="2016-06-10">
+              2016-06-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>标签（空格分隔）： js汇总</p>
+<hr>
+<p>汇总了平时一些经常碰到的算法，<br>集合起来算是给自己一个备忘的地方。<br>随着知识的增加再继续增加。<br><a id="more"></a></p>
+<p>/<em>去重</em>/<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delRepeat</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> newArray=<span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">  <span class="keyword">var</span> len=arr.length;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">var</span> j=i+<span class="number">1</span>;j&lt;len;j++)</span><br><span class="line">     &#123;</span><br><span class="line">       <span class="keyword">if</span>(arr[i]==arr[j])</span><br><span class="line">       &#123;</span><br><span class="line">         ++i;  </span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">    newArray.push(arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line"> <span class="keyword">return</span> newArray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"red"</span>,<span class="string">"red"</span>,<span class="string">"1"</span>,<span class="string">"5"</span>,<span class="string">"2"</span>);</span><br><span class="line">alert(delRepeat(arr));</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>##/<em>二分法</em>/</p>
+<p>##又称为折半查找算法，但是有缺陷就是要求数字是预先排序好的</p>
+<pre><code class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">binary</span>(<span class="params">items,value</span>)</span>{
+ <span class="keyword">var</span> startIndex=<span class="number">0</span>,
+     stopIndex=items.length<span class="number">-1</span>,
+     midlleIndex=(startIndex+stopIndex)&gt;&gt;&gt;<span class="number">1</span>;
+     <span class="keyword">while</span>(items[middleIndex]!=value &amp;&amp; startIndex&lt;stopIndex){
+       <span class="keyword">if</span>(items[middleIndex]&gt;value){
+          stopIndex=middleIndex<span class="number">-1</span>;
+       }<span class="keyword">else</span>{
+          startIndex=middleIndex+<span class="number">1</span>;
+       }
+       middleIndex=(startIndex+stopIndex)&gt;&gt;&gt;<span class="number">1</span>;
+     }
+     <span class="keyword">return</span> items[middleIndex]!=value ? <span class="literal">false</span>:<span class="literal">true</span>;
+}
+<span class="comment">/*十六进制颜色值的随机生成*/</span>
+<span class="function"><span class="keyword">function</span> <span class="title">randomColor</span>(<span class="params"></span>)</span>{
+ <span class="keyword">var</span> arrHex=[<span class="string">"0"</span>,<span class="string">"2"</span>,<span class="string">"3"</span>,<span class="string">"4"</span>,<span class="string">"5"</span>,<span class="string">"6"</span>,<span class="string">"7"</span>,<span class="string">"8"</span>,<span class="string">"9"</span>,<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>],
+     strHex=<span class="string">"#"</span>,
+     index;
+     <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">6</span>;i++){
+      index=<span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random()*<span class="number">15</span>);
+      strHex+=arrHex[index];
+     }
+ <span class="keyword">return</span> strHex;
+}
+<span class="comment">/*一个求字符串长度的方法*/</span>
+<span class="function"><span class="keyword">function</span> <span class="title">GetBytes</span>(<span class="params">str</span>)</span>{
+ <span class="keyword">var</span> len=str.length,
+     bytes=len;
+ <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;len;i++){
+   <span class="keyword">if</span>(str.CharCodeAt&gt;<span class="number">255</span>){
+     bytes++;
+   }
+ }
+ <span class="keyword">return</span> bytes;
+}
+</code></pre>
+<p>/<em>插入排序</em>/<br>所谓的插入排序，就是将序列中的第一个元素看成一个有序的子序列，然后不段向后比较交换比较交换。<br>———————————华丽丽的分割线————————————<br>-</p>
+<pre><code class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">insertSort</span>(<span class="params">arr</span>)</span>{
+  <span class="keyword">var</span> key;
+  <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">1</span>; j &lt; arr.length ; j++){ 
+      <span class="comment">//排好序的</span>
+      <span class="keyword">var</span> i = j - <span class="number">1</span>;
+      key = arr[j];
+      <span class="keyword">while</span>(i &gt;= <span class="number">0</span> &amp;&amp; arr[i] &gt; key){  
+          arr[i + <span class="number">1</span>] = arr[i];       
+          i --;        
+     }
+     arr[i + <span class="number">1</span>] = key;
+  }
+ <span class="keyword">return</span> arr;
+}
+</code></pre>
+<p>/<em>希尔排序</em>/<br>希尔排序，也称递减增量排序算法具体描述：<a href="http://zh.wikipedia.org/zh/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F" target="_blank" rel="external">http://zh.wikipedia.org/zh/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F</a><br>其实说到底也是插入排序的变种</p>
+<pre><code class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">shellSort</span>(<span class="params">array</span>)</span>{
+       <span class="keyword">var</span> stepArr = [<span class="number">1750</span>, <span class="number">701</span>, <span class="number">301</span>, <span class="number">132</span>, <span class="number">57</span>, <span class="number">23</span>, <span class="number">10</span>, <span class="number">4</span>, <span class="number">1</span>]; <span class="comment">// reverse()在维基上看到这个最优的步长较小数组</span>
+        <span class="keyword">var</span> i = <span class="number">0</span>;
+        <span class="keyword">var</span> stepArrLength = stepArr.length;
+        <span class="keyword">var</span> len = array.length;
+        <span class="keyword">var</span> len2 =  <span class="built_in">parseInt</span>(len/<span class="number">2</span>);
+        <span class="keyword">for</span>(;i &lt; stepArrLength; i++){
+            <span class="keyword">if</span>(stepArr[i] &gt; len2){
+                <span class="keyword">continue</span>;
+            }
+            stepSort(stepArr[i]);
+        }
+        <span class="comment">// 排序一个步长</span>
+        <span class="function"><span class="keyword">function</span> <span class="title">stepSort</span>(<span class="params">step</span>)</span>{  
+            <span class="comment">//console.log(step) 使用的步长统计</span>
+            <span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>, f, tem, key;
+            <span class="keyword">var</span> stepLen = len%step &gt; <span class="number">0</span> ?  <span class="built_in">parseInt</span>(len/step) + <span class="number">1</span> : len/step; 
+            <span class="keyword">for</span>(;i &lt; step; i++){<span class="comment">// 依次循环列</span>
+                <span class="keyword">for</span>(j=<span class="number">1</span>;<span class="comment">/*j &lt; stepLen &amp;&amp; */</span>step * j + i &lt; len; j++){<span class="comment">//依次循环每列的每行</span>
+                    tem = f = step * j + i;
+                    key = array[f];
+                    <span class="keyword">while</span>((tem-=step) &gt;= <span class="number">0</span>){<span class="comment">// 依次向上查找</span>
+                        <span class="keyword">if</span>(array[tem] &gt; key){
+                            array[tem+step] = array[tem];
+                        }<span class="keyword">else</span>{
+                            <span class="keyword">break</span>;
+                        }
+                    }    
+                    array[tem + step ] = key;
+                }
+            }
+        }
+        <span class="keyword">return</span> array;
+}
+</code></pre>
+<p>/<em>快速排序</em>/<br>其实说到底快速排序算法就系对冒泡排序的一种改进，采用的就是算法理论中的分治递归的思想，说得明白点，它的做法就是：通过一趟排序将待排序的纪录分割成两部分，其中一部分的纪录值比另外一部分的纪录值要小，就可以继续分别对这两部分纪录进行排序；不段的递归实施上面两个操作，从而实现纪录值的排序。<br>这么说可能不是很清晰，直接上代码：</p>
+<pre><code class="javascript">  &lt;script&gt;
+<span class="function"><span class="keyword">function</span> <span class="title">sort</span>(<span class="params">arr</span>)</span>{
+   <span class="keyword">return</span> quickSort(arr,<span class="number">0</span>,arr.length<span class="number">-1</span>);
+   <span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr,l,r</span>)</span>{
+       <span class="keyword">if</span>(l&lt;r){
+          <span class="keyword">var</span> mid=arr[<span class="built_in">parseInt</span>((l+r)/<span class="number">2</span>)],i=l<span class="number">-1</span>,j=r+<span class="number">1</span>;
+          <span class="keyword">while</span>(<span class="literal">true</span>){
+          <span class="comment">//大的放到右边，小的放到左边, i与j均为游标</span>
+            <span class="keyword">while</span>(arr[++i]&lt;mid);
+            <span class="keyword">while</span>(arr[--j]&gt;mid);
+            <span class="keyword">if</span>(i&gt;=j)<span class="keyword">break</span>;<span class="comment">//判断条件</span>
+            <span class="keyword">var</span> temp = arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+          } 
+          quickSort(arr,l,i<span class="number">-1</span>);
+          quickSort(arr,j+<span class="number">1</span>,r);
+       }
+      <span class="keyword">return</span> arr;
+   }
+}
+<span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>)</span>{
+  <span class="keyword">var</span> list=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">49</span>,<span class="number">38</span>,<span class="number">65</span>,<span class="number">97</span>,<span class="number">76</span>,<span class="number">13</span>,<span class="number">27</span>);
+  <span class="built_in">document</span>.write(sort(list).valueOf());
+}
+main();
+&lt;/script&gt;
+</code></pre>
+<p>原理图：<br>查看大图<br>/<em>冒泡法</em>/</p>
+<pre><code class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">bullSort</span>(<span class="params">array</span>)</span>{
+ <span class="keyword">var</span> temp;
+ <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;array.length;i++){
+   <span class="keyword">for</span>(<span class="keyword">var</span> j=array.length<span class="number">-1</span>;j&gt;i;j--){
+     <span class="keyword">if</span>(array[j]&lt;array[j<span class="number">-1</span>]){
+       temp = array[j];
+       array[j]=array[j<span class="number">-1</span>];
+       array[j<span class="number">-1</span>]=temp;
+     }
+   }
+ }
+ <span class="keyword">return</span> array;
+}
+<span class="comment">/*js递归实现方案*/</span>
+递归函数是在一个函数通过调用自身的情况下去解决的：
+方式如下：
+<span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">num</span>)</span>{
+    <span class="keyword">if</span>(num&lt;=<span class="number">1</span>){
+    <span class="keyword">return</span> <span class="number">1</span>; 
+   }<span class="keyword">else</span>{
+    <span class="keyword">return</span> num*factorial(num<span class="number">-1</span>);
+   }
+}
+</code></pre>
+<p>但是这在js里面可能会出现错误：<br>var anotherFactorial = factorial;<br>factorial=null;<br>alert(anoterFactorial(4));<br>因为在调用anoterFactorial时内部的factorial已经不存在了。<br>解决方法是通过arguments.callee来解决。<br>如下：<br>function factorial(num){<br>  if(num&lt;=1){<br>   return 1;<br>  }else{<br>  return num*arguments.callee(num-1);<br>}<br>var anotherFactorial = factorial;<br>factorial = null;<br>alert(anotherFactorial(4));<br>成功！！！！<br>}</p>
+<p>/<em>选择法排序</em>/<br>选择法主要有三种：<br>《1》简单的选择排序：简单的前后交互。<br>/<em>简单选择法排序</em>/<br>其实基本的思想就是从待排序的数组中选择最小或者最大的，放在起始位置，然后从剩下的数组中选择最小或者最大的排在这公司数的后面。<br><a href="http://zh.wikipedia.org/wiki/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F" target="_blank" rel="external">http://zh.wikipedia.org/wiki/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F</a></p>
+<pre><code class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">selectionSort</span>(<span class="params">data</span>)
+</span>{
+        <span class="keyword">var</span> i, j, min, temp , count=data.length;
+        <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; count - <span class="number">1</span>; i++) {
+                <span class="comment">/* find the minimum */</span>
+                min = i;
+                <span class="keyword">for</span> (j = i+<span class="number">1</span>; j &lt; count; j++)
+                {    <span class="keyword">if</span> (data[j] &lt; data[min])
+                     { min = j;}
+                 }
+                <span class="comment">/* swap data[i] and data[min] */</span>
+                temp = data[i];
+                data[i] = data[min];
+                data[min] = temp;
+        }
+   <span class="keyword">return</span> data;
+}
+</code></pre>
+<p>《2》树型排序：又称锦标赛排序，首先对n个元素进行两两比较，然后在其中[n/2]个较小者再进行两两比较如此重复直至选出最小的关键字的纪录为止。（可用完全二差树表示）。缺点：辅助空间需求过大，和“最大值”进行多余比较<br>《3》堆排序：（不适用于纪录数较少的文件）<br> 堆排序算法的过程如下:<br>1)得到当前序列的最小(大)的元素<br>2)把这个元素和最后一个元素进行交换,这样当前的最小(大)的元素就放在了序列的最后,而原先的最后一个元素放到了序列的最前面<br>3)的交换可能会破坏堆序列的性质(注意此时的序列是除去已经放在最后面的元素),因此需要对序列进行调整,使之满足于上面堆的性质.<br>重复上面的过程,直到序列调整完毕为止.<br>js实现：</p>
+<pre><code class="javascript"> &lt;script&gt;
+ <span class="comment">/**
+* 堆排序
+* @param items 数组
+* @return 排序后的数组
+*/</span>
+   <span class="function"><span class="keyword">function</span> <span class="title">heapSort</span>(<span class="params">items</span>)
+   </span>{
+   items = array2heap(items); <span class="comment">//将数组转化为堆</span>
+   <span class="keyword">for</span>(<span class="keyword">var</span> i = items.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)
+   {
+      items = swap(items, <span class="number">0</span>, i); <span class="comment">//将根和位置i的数据交换(用于将最大值放在最后面)</span>
+      items = moveDown(items, <span class="number">0</span>, i - <span class="number">1</span>); <span class="comment">//数据交换后恢复堆的属性</span>
+   }
+   <span class="keyword">return</span> items;
+   }
+   <span class="comment">/**
+* 将数组转换为堆
+* @param items 数组
+* @return 堆
+*/</span>
+   <span class="function"><span class="keyword">function</span> <span class="title">array2heap</span>(<span class="params">items</span>)
+   </span>{
+   <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="built_in">Math</span>.ceil(items.length / <span class="number">2</span>) - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)
+   {
+      items = moveDown(items, i, items.length - <span class="number">1</span>); <span class="comment">//转换为堆属性</span>
+   }
+   <span class="keyword">return</span> items;
+   }
+   <span class="comment">/**
+* 转换为堆
+* @param items 数组
+* @param first 第一个元素
+* @param last 最后一个元素
+* @return 堆
+*/</span>
+   <span class="function"><span class="keyword">function</span> <span class="title">moveDown</span>(<span class="params">items, first, last</span>)
+   </span>{
+   <span class="keyword">var</span> largest = <span class="number">2</span> * first + <span class="number">1</span>;
+   <span class="keyword">while</span>(largest &lt;= last)
+   {
+      <span class="keyword">if</span>(largest &lt; last &amp;&amp; items[largest] &lt; items[largest + <span class="number">1</span>])
+      {
+             largest++;
+      }
+      <span class="keyword">if</span>(items[first] &lt; items[largest])
+      {
+             items = swap(items, first, largest); <span class="comment">// 交换数据</span>
+             first = largest;   <span class="comment">//往下移</span>
+             largest = <span class="number">2</span> * first + <span class="number">1</span>;
+      }
+      <span class="keyword">else</span>
+      {
+             largest = last + <span class="number">1</span>; <span class="comment">//跳出循环</span>
+      }
+   }
+   <span class="keyword">return</span> items;
+   }
+   <span class="comment">/**
+* 交换数据
+* @param items 数组
+* @param index1 索引1
+* @param index2 索引2
+* @return 数据交换后的数组
+*/</span>
+   <span class="function"><span class="keyword">function</span> <span class="title">swap</span>(<span class="params">items, index1, index2</span>)
+   </span>{
+   <span class="keyword">var</span> tmp = items[index1];
+   items[index1] = items[index2];
+   items[index2] = tmp;
+   <span class="keyword">return</span> items;
+   }
+   <span class="keyword">var</span> a = [<span class="number">345</span>,<span class="number">44</span>,<span class="number">6</span>,<span class="number">454</span>,<span class="number">10</span>,<span class="number">154</span>,<span class="number">3</span>,<span class="number">12</span>,<span class="number">11</span>,<span class="number">4</span>,<span class="number">78</span>,<span class="number">9</span>,<span class="number">0</span>,<span class="number">47</span>,<span class="number">88</span>,<span class="number">9453</span>,<span class="number">4</span>,<span class="number">65</span>,<span class="number">1</span>,<span class="number">5</span>];
+   <span class="built_in">document</span>.write(heapSort(a));
+&lt;/script&gt;
+</code></pre>
+<p>所谓归并就是将两个或者两个以上的有序表合成一个新的有序表。<br>递归形式的算法在形式上较为简洁但实用性较差，与快速排序和堆排序相比，归并排序的最大特点是，它是一种稳定的排序方法。<br>js实现归并：</p>
+<p><script><br>function MemeryArray(Arr,n, Brr, m)<br>{      var i, j, k;<br>       var Crr=new Array();<br>       i = j = k = 0;<br>       while (i &lt; n m)<br>       {<br>              if (Arr[i] &lt; Brr[j])<br>                     Crr[k++] = Arr[i++];<br>              else<br>                     Crr[k++] = Brr[j++];<br>       }<br>       while (i &lt; n)<br>             Crr[k++] = Arr[i++];<br>       while (j &lt; m)<br>             Crr[k++] = Brr[j++];<br>return Crr;<br>}<br>var Arr=new Array(45,36,89,75,65);<br>var Brr=new Array(48,76,59,49,25);<br>alert(MemeryArray(Arr , Arr.length , Brr , Brr.length));<br></script><br>归并排序待续，先睡了：<br>———————————————-华丽丽的分割线————————————————————————-<br>归并排序：</p>
+<p><script><br>//将有二个有序数列a[first…mid]和a[mid…last]合并。<br>function mergearray(Arr,first,mid,last,tempArr)<br>{<br>       var i = first, j = mid + 1;<br>       var m = mid,   n = last;<br>       var k = 0;<br>       while (i &lt;= m = n)<br>       {<br>              if (Arr[i] &lt; Arr[j])<br>                     tempArr[k++] = Arr[i++];<br>              else<br>                     tempArr[k++] = Arr[j++];<br>       }<br>       while (i &lt;= m)<br>              tempArr[k++] = Arr[i++];<br>       while (j &lt;= n)<br>              tempArr[k++] = Arr[j++];<br>       for (i = 0; i &lt; k; i++)<br>              Arr[first + i] = tempArr[i];<br>}<br>function mergesort(Arr,first,last)<br>{<br>       var tempArr=new Array();<br>       if (first &lt; last)<br>       {<br>         var mid = (first + last)&gt;&gt;&gt;1;<br>         mergesort(Arr, first, mid, tempArr);    //左边有序<br>         mergesort(Arr, mid + 1, last, tempArr);  //右边有序<br>         mergearray(Arr, first, mid, last, tempArr);  //再将二个有序数列合并<br>       }<br>  return  Arr;<br>}<br>var Arr=new Array(1,65,45,98,56,78);<br>alert(mergesort(Arr,0,Arr.length-1));<br></script><br>/<em>比较两个字符串的相似性－Levenshtein算法简介</em>/<br>问题与描述：<br>近似字符串匹配问题<br>说明：设给定样本，对于任意文本串，样本P在文本T中的K-近似匹配（K-approximate match）是指P在T中包含最多K个差异的匹配，这里的差别指：<br>（1）修改：P与T中对应的字符不同<br>（2）删除：T中含有一个未出现在P中的字符<br>（3）插入：T中不包含出现在P中的一个字符<br>（也就是编辑距离问题）</p>
+<pre><code class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">binary</span>(<span class="params">items,value</span>)</span>{
+ <span class="keyword">var</span> startIndex=<span class="number">0</span>,
+     stopIndex=items.length<span class="number">-1</span>,
+     midlleIndex=(startIndex+stopIndex)&gt;&gt;&gt;<span class="number">1</span>;
+     <span class="keyword">while</span>(items[middleIndex]!=value &amp;&amp; startIndex&lt;stopIndex){
+       <span class="keyword">if</span>(items[middleIndex]&gt;value){
+          stopIndex=middleIndex<span class="number">-1</span>;
+       }<span class="keyword">else</span>{
+          startIndex=middleIndex+<span class="number">1</span>;
+       }
+       middleIndex=(startIndex+stopIndex)&gt;&gt;&gt;<span class="number">1</span>;
+     }
+     <span class="keyword">return</span> items[middleIndex]!=value ? <span class="literal">false</span>:<span class="literal">true</span>;
+}
+</code></pre>
+<p>/<em>十六进制颜色值的随机生成</em>/</p>
+<pre><code class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">randomColor</span>(<span class="params"></span>)</span>{
+ <span class="keyword">var</span> arrHex=[<span class="string">"0"</span>,<span class="string">"2"</span>,<span class="string">"3"</span>,<span class="string">"4"</span>,<span class="string">"5"</span>,<span class="string">"6"</span>,<span class="string">"7"</span>,<span class="string">"8"</span>,<span class="string">"9"</span>,<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>],
+     strHex=<span class="string">"#"</span>,
+     index;
+     <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">6</span>;i++){
+      index=<span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random()*<span class="number">15</span>);
+      strHex+=arrHex[index];
+     }
+ <span class="keyword">return</span> strHex;
+}
+</code></pre>
+<p>/<em>一个求字符串长度的方法</em>/</p>
+<pre><code class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">GetBytes</span>(<span class="params">str</span>)</span>{
+ <span class="keyword">var</span> len=str.length,
+     bytes=len;
+ <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;len;i++){
+   <span class="keyword">if</span>(str.CharCodeAt&gt;<span class="number">255</span>){
+     bytes++;
+   }
+ }
+ <span class="keyword">return</span> bytes;
+}
+</code></pre>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/09/title- Ajax笔记3/" rel="next" title="Ajax笔记3">
+                <i class="fa fa-chevron-left"></i> Ajax笔记3
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/10/title- 《精通CSS》阅读备忘/" rel="prev" title="《精通CSS》阅读备忘">
+                《精通CSS》阅读备忘 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="H5 Monkey" />
+          <p class="site-author-name" itemprop="name">H5 Monkey</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">H5 Monkey</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

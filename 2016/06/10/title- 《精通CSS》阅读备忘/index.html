@@ -1,0 +1,642 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="标签（空格分隔）： CSS
+
+最近阅读了《精通CSS: 高级Web标准解决方案》，书的内容不错，初学者可以用来入门，有经验的人也可以用来查漏补缺，上面对于浏览器兼容和常见bug的解决方案值得参考。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《精通CSS》阅读备忘">
+<meta property="og:url" content="http://yoursite.com/2016/06/10/title- 《精通CSS》阅读备忘/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="标签（空格分隔）： CSS
+
+最近阅读了《精通CSS: 高级Web标准解决方案》，书的内容不错，初学者可以用来入门，有经验的人也可以用来查漏补缺，上面对于浏览器兼容和常见bug的解决方案值得参考。">
+<meta property="og:updated_time" content="2016-06-10T05:16:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《精通CSS》阅读备忘">
+<meta name="twitter:description" content="标签（空格分隔）： CSS
+
+最近阅读了《精通CSS: 高级Web标准解决方案》，书的内容不错，初学者可以用来入门，有经验的人也可以用来查漏补缺，上面对于浏览器兼容和常见bug的解决方案值得参考。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/10/title- 《精通CSS》阅读备忘/"/>
+
+  <title> 《精通CSS》阅读备忘 | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一只努力向上的老猿</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                《精通CSS》阅读备忘
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-10T13:16:27+08:00" content="2016-06-10">
+              2016-06-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>标签（空格分隔）： CSS</p>
+<hr>
+<p>最近阅读了《精通CSS: 高级Web标准解决方案》，书的内容不错，初学者可以用来入门，有经验的人也可以用来查漏补缺，上面对于浏览器兼容和常见bug的解决方案值得参考。</p>
+<a id="more"></a>
+<p>选择器的层叠和特殊性<br>对于同一个元素，可能会有多个规则，为了解决规则之间的冲突，CSS 会利用 层叠 给每个规则分配一个重要度：</p>
+<p>1、标有 !important 的用户样式</p>
+<p>2、标有 !important 的作者样式</p>
+<p>3、作者样式</p>
+<p>4、用户样式</p>
+<p>5、浏览器/用户代理应用的样式</p>
+<p>层叠优先级依次降低，优先级相同的规则，后定义的规则优先。为了计算规则的特殊性，可以给每种选择器分配一个数值，然后，将规则的每个选择器的值加在一起，计算出规则的特殊性。</p>
+<p>对于一个选择器，其特殊性分为4个成分等级：a, b, c 和 d</p>
+<p>1、如果样式是行内样式，那么a=1</p>
+<p>2、b是ID选择器的个数</p>
+<p>3、c是类、伪类和属性选择器的个数</p>
+<p>4、d是类型/标签选择器和伪元素选择器的个数</p>
+<p>通配符和继承得到的CSS属性对特殊性没有影响。看一个 demo：选择器规则</p>
+<p>h2的最终颜色是灰色的，从规则的特殊性分析一下(从左至右依次是abcd的值)</p>
+<p>选择器    特殊性    以10为基数的特殊性<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#content div#main-content h2	0,2,0,2	202</span><br><span class="line">#content #main-content&gt;h2	0,2,0,1	201</span><br><span class="line">body #content div[id='main-content'] h2	0,1,1,3	113</span><br><span class="line">#main-content div.news-story h2	0,1,1,2	112</span><br><span class="line">#main-content [class='news-story'] h2	0,1,1,1	111</span><br><span class="line">div#main-content div.news-story h2.first-child	0,1,2,3	123</span><br></pre></td></tr></table></figure></p>
+<p>从上表可知，第一个选择器的特殊性最高，所以h2的颜色最终为灰色(gray)。</p>
+<p>一篇文章：How CSS Specificity Works</p>
+<p>外边距叠加<br>当块元素的 Top 和 Bottom 外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者，称为 Margin Collapsing（Margin 塌陷）。</p>
+<p>Margin Collapsing 基于三种情况：</p>
+<p>1、上下相邻的块元素</p>
+<p>上一个块元素出现在另一个块元素之上时，如果设置了 margin，二者的 margin-bottom 和 margin-top 会发生叠加：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">margin collapse</span><br><span class="line"></span><br><span class="line">Demo</span><br></pre></td></tr></table></figure></p>
+<p>2、父元素和第一个或最后一个子元素</p>
+<p>如果父块元素和第一个子元素之间没有边框、内边距、内联内容和 间距 分开，若设置了 margin，则二者的 margin-top 会叠加；或者父块元素和最后一个子元素之间没有边框、内边距、内联内容和高度设置(height/min-height/max-height)，若设置了 margin，则二者的 margin-bottom 会叠加。</p>
+<p>Demo</p>
+<p>可以给父元素增加 border、设置 padding、填充内容等方式来解决，还可以通过 overflow:hidden 来解决：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    /**填充内容**/</span><br><span class="line">  &lt;p&gt;margin-top&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">div&#123;</span><br><span class="line">    overflow:hidden;</span><br><span class="line">    //padding:10px;</span><br><span class="line">    //border:1px solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3、空的块元素</p>
+<p>对于没有边框、内边距、内联内容和高度设置(height/min-height)的空块元素，如果设置了 margin，则顶底外边距会发生叠加：</p>
+<p>如果这个外边距碰到另一个空元素的外边距，则还会发生叠加，合并成一个外边距。但是 浮动和绝对定位的元素是不会发生 Margin Collapse 现象的。</p>
+<p>两篇文章：</p>
+<p>深入理解BFC和Margin Collapse</p>
+<p>Mastering margin collapsing</p>
+<p>定位<br>CSS 中的定位主要跟 position 属性有关，MDN 上关于 position 的语法如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Keyword values */</span></span><br><span class="line">position: <span class="keyword">static</span>;</span><br><span class="line">position: relative;</span><br><span class="line">position: absolute;</span><br><span class="line">position: fixed;</span><br><span class="line">position: sticky;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Global values */</span></span><br><span class="line">position: inherit;</span><br><span class="line">position: initial;</span><br><span class="line">position: unset;</span><br><span class="line">(<span class="number">1</span>) <span class="keyword">static</span></span><br></pre></td></tr></table></figure></p>
+<p>静态定位，position 的默认值，各元素的位置由元素在 HTML 的位置决定</p>
+<p>(2) relative</p>
+<p>相对定位的元素会根据 top，left，bottom，right 的值相对于该元素处于静态定位时(普通文档流)的位置进行偏移。</p>
+<p>相对定位的元素仍会占据原来的空间，因而，该元素偏移会覆盖其它框。</p>
+<p>(3) absolute</p>
+<p>绝对定位的元素会脱离文档流，是相对于距离它最近的那个已经定位(非 static)的祖先元素确定的，如果没有已定位的祖先元素，则相对于初始的包含块定位。绝对定位的元素不会产生 Margin Collapse 现象。</p>
+<p>相对于最初包含块偏移</p>
+<p>相对于定位的祖先元素定位</p>
+<p>因为绝对定位的元素与文档流无关，所以会覆盖页面的其它元素，并可以通过 z-index 属性来控制元素的堆叠顺序，其值越大，元素越在上层。z-index 只再非静态定位的元素中有效。</p>
+<p>另外，对于绝对定位的行内元素，会改变其显示形态，变成“块元素”，能对其设置宽高、外边距、边框等属性。</p>
+<p>span 具有“块元素” 了</p>
+<p>(4) fixed</p>
+<p>固定定位是绝对定位的一种，差异在于固定定位的元素的包含块是视口(viewport)，这使得改元素总是出现在窗口中的相同位置。</p>
+<p>(5) sticky</p>
+<p>这是 CSS3 的一个新属性，它的表现类似 <code>position:relative</code> 和 <code>position:fixed</code> 的合体，在目标区域在屏幕中可见时，它的行为就像 <code>position:relative;</code> 而当页面滚动超出目标区域时，它的表现就像 <code>position:fixed，</code>它会固定在目标位置。其兼容性如下：</p>
+<p>在 Firefox 或 Safari 中查看 sticky 的 Demo</p>
+<p>一篇文章：CSS position</p>
+<p>浮动<br>与浮动相关的属性是 float。浮动元素和绝对定位元素一样，也会脱离文档流，不会占据空间：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">'news'</span>&gt;</span><br><span class="line">  &lt;img src='http://ww3.sinaimg.cn/bmiddle/8d522661gw1ey1rotf8t6j205k03hjr9.jpg'  /&gt;</span><br><span class="line">  &lt;p&gt;some text&lt;/p&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line"></span><br><span class="line">//css</span><br><span class="line">.news&#123;</span><br><span class="line">  border:1px solid red;</span><br><span class="line">&#125;</span><br><span class="line">img&#123;</span><br><span class="line">  float: left;</span><br><span class="line">&#125;</span><br><span class="line">p&#123;</span><br><span class="line">  float: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Demo</span><br></pre></td></tr></table></figure></p>
+<p>由于图片和文本都不占空间，所以 div 并没有被撑开，就看到了图示的效果。那么，如何让包围元素再视觉上包围浮动元素呢？</p>
+<p>1、增加空行清除浮动<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;some text&lt;/p&gt;</span><br><span class="line">&lt;br class='clear' /&gt;</span><br><span class="line"></span><br><span class="line">//css</span><br><span class="line">.clear&#123;</span><br><span class="line">    clear: both;</span><br><span class="line">&#125;</span><br><span class="line">Demo1</span><br></pre></td></tr></table></figure></p>
+<p>这种方式不会受到子元素大小的限制，但会增加额外的标签和代码。</p>
+<p>2、利用伪元素<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.news:after&#123;</span><br><span class="line">  display: block;</span><br><span class="line">  height: <span class="number">125</span>px;</span><br><span class="line">  content: <span class="string">''</span>;</span><br><span class="line">&#125;</span><br><span class="line">Demo2</span><br></pre></td></tr></table></figure></p>
+<p>这种方式不用增加额外的标签和代码，但是会受子元素大小的限制。</p>
+<p>3、对包含元素添加浮动<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.news&#123;</span><br><span class="line">  float: left;</span><br><span class="line">&#125;</span><br><span class="line">Demo3</span><br></pre></td></tr></table></figure></p>
+<p>这种方式不会增加额外的标签和代码，也不会受到子元素大小的限制，但是下一个元素会受此元素浮动的影响</p>
+<p>4、利用 overflow<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.news&#123;</span><br><span class="line">  border:<span class="number">1</span>px solid red;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">Demo4</span><br></pre></td></tr></table></figure></p>
+<p>这种方式会自动清理包含的任何浮动元素，但在某些情况下，会影响盒子的显示，产生滚动条或者阶段内容。</p>
+<p>一篇文章：详解 CSS float 属性</p>
+<p>背景图像定位<br>雪碧图（CSS Sprite）是网站优化的一种方式，将多张背景图合并到一张大图上，从而减少 HTTP 请求数。对雪碧图进行定位的相关属性是 background-position。</p>
+<p>背景图片被放置在元素的背景放置区(background positioning area)内，放置区指定了背景图片将被放置的区域，用一套坐标体系来控制位置。因为默认的放置区是在填充框内，所以默认情况放置区的坐标原点在填充框左上角。这意味着当你为元素应用背景图片的时候，浏览器从填充框的左上角开始放置第一张以及随后的图片。</p>
+<p>background-position 有两个值：第一个值表示水平位置，第二个值表示垂直位置。位置的值可以用关键字(top/left/right/bottom/center)、百分比和像素表示，也可以混合，但规范不建议这么做。</p>
+<p>当使用关键字的时候，若只指定了一个值，则另一个值默认是 center。</p>
+<p>如果使用像素设置背景位置，则是图像左上角到背景放置区左上角的距离；</p>
+<p>如果使用百分比设置背景位置，则是相对于图像上的定点进行定位。</p>
+<p>使用像素，则图像出现在放置区的左上角下面20px，左边20px；使用百分比，则是图像上相对于图像左上角20%的定点到放置区左上角20%的位置。</p>
+<p>两篇文章：</p>
+<p>CSS 中的百分比</p>
+<p>CSS中的<code>background-position</code></p>
+<p>常见Bug的处理<br>主要是一些 IE8 以下的bug，如果还要去IE6，IE7的兼容，还不如辞职，如果你不想辞职，就看这篇文章喽：</p>
+<blockquote>
+<p><a href="http://www.dengzhr.com/frontend/css/296" target="_blank" rel="external">http://www.dengzhr.com/frontend/css/296</a></p>
+</blockquote>
+<p>转载自：淡忘~浅思 » 《精通CSS》阅读备忘</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/10/title- 常见算法是js实现汇总（1）/" rel="next" title="常见算法是js实现汇总（1）">
+                <i class="fa fa-chevron-left"></i> 常见算法是js实现汇总（1）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/10/title- 对自己的鞭策！！！！/" rel="prev" title="对自己的鞭策！！！！">
+                对自己的鞭策！！！！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="H5 Monkey" />
+          <p class="site-author-name" itemprop="name">H5 Monkey</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">H5 Monkey</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
