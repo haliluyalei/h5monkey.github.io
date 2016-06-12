@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JS,小数," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,45 @@
 
 
 
-<meta name="description" content="上周老师留下的一个小问题？用Javascript取小数点后两位，例取成3.1415926,如何做3.15？">
-<meta property="og:type" content="article">
-<meta property="og:title" content="用JS获取小数点后两位数字方法">
-<meta property="og:url" content="http://yoursite.com/2016/06/11/js获取小数点后2位数字方法/index.html">
+<meta name="description" content="简介姓名：Jerry Chan学校：树人
+爱好爱折腾app/软件,有强迫症。
+ 社交
+
+知乎
+豆瓣
+Twitter
+
+技能清单：
+还在思考写些什么？">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="上周老师留下的一个小问题？用Javascript取小数点后两位，例取成3.1415926,如何做3.15？">
-<meta property="og:updated_time" content="2016-06-10T16:56:27.000Z">
+<meta property="og:description" content="简介姓名：Jerry Chan学校：树人
+爱好爱折腾app/软件,有强迫症。
+ 社交
+
+知乎
+豆瓣
+Twitter
+
+技能清单：
+还在思考写些什么？">
+<meta property="og:image" content="http://o8lhvvxj2.bkt.clouddn.com/ym.gif">
+<meta property="og:updated_time" content="2016-06-12T12:28:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用JS获取小数点后两位数字方法">
-<meta name="twitter:description" content="上周老师留下的一个小问题？用Javascript取小数点后两位，例取成3.1415926,如何做3.15？">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="简介姓名：Jerry Chan学校：树人
+爱好爱折腾app/软件,有强迫症。
+ 社交
+
+知乎
+豆瓣
+Twitter
+
+技能清单：
+还在思考写些什么？">
+<meta name="twitter:image" content="http://o8lhvvxj2.bkt.clouddn.com/ym.gif">
 
 
 
@@ -114,9 +143,15 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/11/js获取小数点后2位数字方法/"/>
+  <link rel="canonical" href="http://yoursite.com/about/"/>
 
-  <title> 用JS获取小数点后两位数字方法 | Hexo </title>
+  <title>
+  
+
+  
+     | Hexo
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -137,7 +172,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -227,151 +262,21 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    
+      <p><img src="http://o8lhvvxj2.bkt.clouddn.com/ym.gif" alt="此处输入图片的描述"></p>
+<p><strong>简介</strong><br>姓名：Jerry Chan<br>学校：树人</p>
+<p>爱好<br>爱折腾app/软件,有强迫症。</p>
+<p> 社交</p>
+<ul>
+<li>知乎</li>
+<li>豆瓣</li>
+<li>Twitter</li>
+</ul>
+<p>技能清单：</p>
+<p>还在思考写些什么？</p>
+<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="http://music.163.com/outchain/player?type=4&id=100002&auto=1&height=90"></iframe></p>
 
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                用JS获取小数点后两位数字方法
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-11T00:56:27+08:00" content="2016-06-11">
-              2016-06-11
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>上周老师留下的一个小问题？<br>用Javascript取小数点后两位，例取成3.1415926,如何做3.15？</p>
-<a id="more"></a>
-<p><strong>1. 截取： [我就怎么干的………]</strong></p>
-<pre><code> function get()
-{
-   var s = 22.127456 + &quot;&quot;;
-    var str = s.substring(0,s.indexOf(&quot;.&quot;) + 3);
-   alert(str);
-} 
-</code></pre><p><strong>2. 正则表达式效果不错</strong></p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
- onload = function(){
-    var a = &quot;23.456322&quot;;
-    var aNew;
-   var re = /([0-9]+/.[0-9]{2})[0-9]*/;
-    aNew = a.replace(re,&quot;$1&quot;);
-    alert(aNew);
- }
- &lt;script&gt;
-</code></pre><p><strong>3. 他就比较聪明了…..</strong></p>
-<pre><code>&lt;script&gt;
-var num=22.127456;
-alert( Math.round(num*100)/100);
-&lt;script&gt; 
-</code></pre><p><strong>4.会用新鲜东西的朋友……. 但是需要 IE5.5+才支持</strong>。</p>
-<pre><code>&lt;script&gt;
-var num=22.127456;
-alert( num.toFixed(2));
-&lt;script&gt;
-</code></pre><p>最多可以保留到20位。</p>
-
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/JS-小数/" rel="tag">#JS,小数</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/06/11/javascript数组的使用/" rel="next" title="javascript数组的使用">
-                <i class="fa fa-chevron-left"></i> javascript数组的使用
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/11/前端入门笔记（2）--css/" rel="prev" title="前端入门笔记（2）--css">
-                前端入门笔记（2）--css <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -403,17 +308,8 @@ alert( num.toFixed(2));
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -456,17 +352,6 @@ alert( num.toFixed(2));
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -570,10 +455,6 @@ alert( num.toFixed(2));
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
