@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="猜数字," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="-多练多看多思考！！1.输入一个数字？2.猜数字的条件？if。。。else3.5次错误？循环">
+<meta name="description" content="标签（空格分隔）： null undefined
+
+一、样式按组件或板块分文件写再合成">
 <meta property="og:type" content="article">
-<meta property="og:title" content="猜数字小习题">
-<meta property="og:url" content="http://yoursite.com/2016/06/11/猜数字/index.html">
+<meta property="og:title" content="移动端开发的一些技巧">
+<meta property="og:url" content="http://yoursite.com/2016/06/12/title- 移动端开发的一些技巧/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="-多练多看多思考！！1.输入一个数字？2.猜数字的条件？if。。。else3.5次错误？循环">
-<meta property="og:updated_time" content="2016-06-10T16:56:46.000Z">
+<meta property="og:description" content="标签（空格分隔）： null undefined
+
+一、样式按组件或板块分文件写再合成">
+<meta property="og:updated_time" content="2016-06-12T08:50:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="猜数字小习题">
-<meta name="twitter:description" content="-多练多看多思考！！1.输入一个数字？2.猜数字的条件？if。。。else3.5次错误？循环">
+<meta name="twitter:title" content="移动端开发的一些技巧">
+<meta name="twitter:description" content="标签（空格分隔）： null undefined
+
+一、样式按组件或板块分文件写再合成">
 
 
 
@@ -114,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/11/猜数字/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/12/title- 移动端开发的一些技巧/"/>
 
-  <title> 猜数字小习题 | Hexo </title>
+  <title> 移动端开发的一些技巧 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +242,7 @@
             
             
               
-                猜数字小习题
+                移动端开发的一些技巧
               
             
           </h1>
@@ -248,8 +254,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-11T00:56:46+08:00" content="2016-06-11">
-              2016-06-11
+            <time itemprop="dateCreated" datetime="2016-06-12T16:50:32+08:00" content="2016-06-12">
+              2016-06-12
             </time>
           </span>
 
@@ -276,39 +282,39 @@
       
 
       
-        <p>-<br><strong>多练多看多思考！！</strong><br>1.输入一个数字？<br>2.猜数字的条件？if。。。else<br>3.5次错误？循环</p>
-<a id="more"></a>
-<pre><code>function findNumber(){
-          var okNumeber = 11;
-          for (var i = 1; i &lt;= 5; i++) { 
-              var xnumber = prompt(&quot;请输入数字&quot;);
-              var n = parseFloat(xnumber);
-              if (n &gt; okNumeber) {
-                  //第五次猜错
-                  if(i==5){
-                      alert(&quot;智商低&quot;);
-                      break;
-                  }
-                  alert(&quot;数字过大,第&quot;+i+&quot;次&quot;);
-              }
+        <p>标签（空格分隔）： null undefined</p>
+<hr>
+<p>一、样式按组件或板块分文件写再合成<br><a id="more"></a><br>①设置各种变量</p>
+<p>采用scss或者less来写css代码有很多好处。这里就不详细说。</p>
+<p>我们拿到设计图的第一步，就是要分析各个页面之间有哪些模块、哪些样式、哪些颜色是一样的。一般情况下，为了各个页面的风格统一，各个页面上的主颜色应该都是一致的，而且好些页面都会用到一些相同的组件，例如slider。所以，我们首先可以定义一个常量文件，里面就专门存放颜色、高度、宽度等变量。定义一个公共样式文件，例如写一些各个页面都有可能用到的清楚浮动等样式。</p>
+<p>个人感觉scss比less更好用一点，用scss定义的话，其中有一个方法是%定义法，就是定义了并不会被编译，而是实际上用到的时候才会被编译。例子图：</p>
+<p>②按模块细分</p>
+<p>个人感觉，按模块等细分之后，代码的可读性能够明显地提高，方便维护，而且引入页面的文件个数也减少了，还可以提高性能呢。不过，这里要注意，子模块的文件名要以“_”开始哦，这样就不会被编译，而是需要引用的时候再编译哦。例子如图：</p>
+<p>二、页面适应性布局</p>
+<p>个人认为，适配移动端比较好的布局方式是百分比+rem布局。</p>
+<p>百分比的优势在于，同一个百分比的真实尺寸会跟随屏幕大小变化。举个例子，像这种：</p>
+<p>红色框那里，假设现在的要求是一行4个板块，适应任何屏幕。那么，用ul,li写html，然后布局的话，如果写定ul的宽度是100%，然后li的宽度是25%，再设置box-sizing:border-box的话。各种屏幕下，这四块都是平分并且不会出现横向滚动条的。不过要注意，这个时候的间距就不要用margin-left和margin-right来撑开，而是用padding来撑开。就是像这样比例明显，板块区分度高的情况适合用百分比来布局。</p>
+<p>代码如下：</p>
+<p>复制代码<br>ul{<br>    width:100%;<br>    margin-bottom:10px;<br>｝<br>ul li{<br>    width:25%;<br>    box-sizing:border-box;<br>｝<br>复制代码<br>为什么要设置box-sizing:border-box;呢？不明白的话，可以看这里：<a href="http://www.w3school.com.cn/cssref/pr_box-sizing.asp。" target="_blank" rel="external">http://www.w3school.com.cn/cssref/pr_box-sizing.asp。</a></p>
+<p>rem的话，rem的取值是只。相对于根元素htm的font-size，即只需要设置根元素的font-size，其它元素使用rem单位设置成相应的百分比即可。你再用@media写一下不同尺寸下跟元素html的font-size的值即可。然后神奇的事情就发生了。当你改变尺寸时，字体。图片等，就会自动跟着适应了。用起来真的很爽！</p>
+<p>一些常用的适应尺寸如下:</p>
+<p>复制代码<br>@charset “utf-8”;</p>
+<p>@media only screen and (max-width: 315px){<br>  html {<br>    font-size: 50% !important;<br>  }<br>}<br>@media only screen and (min-width: 316px){<br>  html {<br>    font-size: 62.5% !important;<br>  }<br>}<br>@media only screen and (min-width: 640px){<br>  html {<br>    font-size: 125% !important;<br>  }<br>}<br>@media only screen and (min-width: 750px){<br>  html {<br>    font-size: 150% !important;<br>  }<br>}<br>@media only screen and (min-width: 1242px){<br>  html {<br>    font-size: 187.5% !important;<br>  }<br>}<br>复制代码<br>想了解更多，可以参考这里：<a href="http://www.cnblogs.com/beidan/p/5275379.html#3382529。" target="_blank" rel="external">http://www.cnblogs.com/beidan/p/5275379.html#3382529。</a></p>
+<p>三、常见的一些效果的做法</p>
+<p>①页面板块可横向滑动</p>
+<p>一种就是我们经常见的，一些特卖活动、抢购活动的时候，需要出现横向滚动情况。效果图：</p>
+<p>不要以为这种效果会涉及到什么touch事件，要写多复杂的js。其实只用css就可以很简单地实现了。原理就是利用overflow属性。设置其水平方向滚动，垂直方向hidden即可。</p>
+<p>当然，还要配合一些其他的代码。</p>
+<p>具体css代码如下：</p>
+<p>复制代码<br>ul.pinxiang-list{<br>        padding:10px;<br>        padding-top:0;<br>        padding-bottom:20px;<br>        width:100%;<br>        box-sizing:border-box;<br>        overflow-x:scroll;<br>        overflow-y:hidden;<br>        white-space: nowrap;<br>        float:left;<br>｝<br>ul.pinxiang-list li{<br>        position:relative;<br>        display:inline-block;<br>        margin-right:5px;<br> ｝<br>复制代码<br>这里最主要的就是要设置ul的宽度是100%，并且向左浮动。li要设置为display:inline-block.</p>
+<p>还有一个就是，如果你用谷歌调试的时候，会发现，效果是这样的：</p>
+<p>对，就是会出现一个明显的滚动条。但是如果你用真机，也就是用移动设备看的时候，你会发现其实滚动条是不会出现的。所以有时候做移动的东西，还是需要真机测试一下比较靠谱啊。</p>
+<p>另外要注意一个问题，由于li被display:inline-block.那么就有了inline的属性，默认。此元素会被显示为内联元素，元素前后没有换行符。并且，该属性定义行内元素的基线相对于该元素所在行的基线的垂直对齐。什么意思呢，简单来说就是这些li的对齐基线的默认方式是以最后一行的文字对齐的。看图：</p>
+<p>由图中可以明显看出，最后一个li由于没有图片撑起来，而它们的默认方式又是以最后一行文字为基准的，所以最后一个li就“掉”了下来。这个时候，我们就需要设置一下vertical-align这个属性的值了。设置为：vertical-align:middle。具体用法，可以看这里。这样设置了的话，就没有问题了哦。效果完成！！！</p>
+<p>结语</p>
+<p>好像也没想到还要说什么呢。先说到这里吧。。。有看不懂的可以私信给我哦！</p>
+<p>最后，祝大家端午节快乐！</p>
 
-              if (n == okNumeber) {
-                  alert(&quot;恭喜你对了&quot;+i+&quot;次&quot;);
-                  break;
-              }
-
-              if (n &lt; okNumeber) {
-                  if(i==5){
-                      alert(&quot;智商低&quot;);
-                      break;
-                  }
-                  alert(&quot;数字过小,第&quot;+i+&quot;次&quot;);
-                }
-      }
-
-      }
-      alert(findNumber());
-</code></pre>
       
     </div>
 
@@ -327,28 +333,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/猜数字/" rel="tag">#猜数字</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/11/前端入门笔记（2）--css/" rel="next" title="前端入门笔记（2）--css">
-                <i class="fa fa-chevron-left"></i> 前端入门笔记（2）--css
+              <a href="/2016/06/12/title- js中的null和undefined的区别/" rel="next" title="JavaScript中的null和undefined的区别">
+                <i class="fa fa-chevron-left"></i> JavaScript中的null和undefined的区别
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/11/前端入门笔记（1）--HTML (2)/" rel="prev" title="前端入门笔记（1）--HTML">
-                前端入门笔记（1）--HTML <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
