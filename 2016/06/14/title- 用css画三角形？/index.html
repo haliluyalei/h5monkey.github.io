@@ -84,22 +84,20 @@
 
 
 
-<meta name="description" content="标签（空格分隔）： null undefined
-
-在JavaScript开发中，被人问到：null与undefined到底有啥区别？ 一时间不好回答，特别是undefined，因为这涉及到undefined的实现原理。">
+<meta name="description" content="今天碰到的第二个问题？一直以来用canvas画习惯了，一下子问我用css画呢？有点懵逼了 😂 😂 😂 😂 😂">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript中的null和undefined的区别">
-<meta property="og:url" content="http://yoursite.com/2016/06/12/title- js中的null和undefined的区别/index.html">
+<meta property="og:title" content="用css画三角形？">
+<meta property="og:url" content="http://yoursite.com/2016/06/14/title- 用css画三角形？/index.html">
 <meta property="og:site_name" content="一只努力向上的老猿">
-<meta property="og:description" content="标签（空格分隔）： null undefined
-
-在JavaScript开发中，被人问到：null与undefined到底有啥区别？ 一时间不好回答，特别是undefined，因为这涉及到undefined的实现原理。">
-<meta property="og:updated_time" content="2016-06-12T08:11:35.000Z">
+<meta property="og:description" content="今天碰到的第二个问题？一直以来用canvas画习惯了，一下子问我用css画呢？有点懵逼了 😂 😂 😂 😂 😂">
+<meta property="og:image" content="http://o8lhvvxj2.bkt.clouddn.com/QQ20160614-0.png">
+<meta property="og:image" content="http://o8lhvvxj2.bkt.clouddn.com/transparent.png">
+<meta property="og:image" content="http://o8lhvvxj2.bkt.clouddn.com/1242010-f25bb156ff36db5f.png">
+<meta property="og:updated_time" content="2016-06-14T13:33:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript中的null和undefined的区别">
-<meta name="twitter:description" content="标签（空格分隔）： null undefined
-
-在JavaScript开发中，被人问到：null与undefined到底有啥区别？ 一时间不好回答，特别是undefined，因为这涉及到undefined的实现原理。">
+<meta name="twitter:title" content="用css画三角形？">
+<meta name="twitter:description" content="今天碰到的第二个问题？一直以来用canvas画习惯了，一下子问我用css画呢？有点懵逼了 😂 😂 😂 😂 😂">
+<meta name="twitter:image" content="http://o8lhvvxj2.bkt.clouddn.com/QQ20160614-0.png">
 
 
 
@@ -120,9 +118,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/12/title- js中的null和undefined的区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/14/title- 用css画三角形？/"/>
 
-  <title> JavaScript中的null和undefined的区别 | 一只努力向上的老猿 </title>
+  <title> 用css画三角形？ | 一只努力向上的老猿 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +250,7 @@
             
             
               
-                JavaScript中的null和undefined的区别
+                用css画三角形？
               
             
           </h1>
@@ -264,8 +262,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-12T16:11:35+08:00" content="2016-06-12">
-              2016-06-12
+            <time itemprop="dateCreated" datetime="2016-06-14T21:33:19+08:00" content="2016-06-14">
+              2016-06-14
             </time>
           </span>
 
@@ -275,8 +273,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/12/title- js中的null和undefined的区别/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/12/title- js中的null和undefined的区别/" itemprop="commentsCount"></span>
+                <a href="/2016/06/14/title- 用css画三角形？/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/14/title- 用css画三角形？/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -299,30 +297,12 @@
       
 
       
-        <p>标签（空格分隔）： null undefined</p>
-<hr>
-<p>在JavaScript开发中，被人问到：null与undefined到底有啥区别？ 一时间不好回答，特别是undefined，因为这涉及到undefined的实现原理。<br><a id="more"></a><br>总所周知：null == undefined<br>但是：null !== undefined<br>那么这两者到底有啥区别呢？</p>
-<p>null</p>
-<p>这是一个对象，但是为空。因为是对象，所以 typeof null 返回 ‘object’ 。</p>
-<p>null 是 JavaScript 保留关键字。</p>
-<p>null 参与数值运算时其值会自动转换为 0 ，因此，下列表达式计算后会得到正确的数值：</p>
-<p>表达式：123 + null　　　　结果值：123</p>
-<p>表达式：123 * null　　　　结果值：0</p>
-<p>undefined</p>
-<p>undefined是全局对象（window）的一个特殊属性，其值是未定义的。但 typeof undefined 返回 ‘undefined’ 。</p>
-<p>虽然undefined是有特殊含义的，但它确实是一个属性，而且是全局对象（window）的属性。请看下面的代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">alert(<span class="string">'undefined'</span> <span class="keyword">in</span> <span class="built_in">window</span>);   <span class="comment">//输出：true</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="keyword">var</span> anObj = &#123;&#125;;</span><br><span class="line"><span class="number">3</span></span><br><span class="line">alert(<span class="string">'undefined'</span> <span class="keyword">in</span> anObj);    <span class="comment">//输出：false</span></span><br></pre></td></tr></table></figure></p>
-<p>从中可以看出，undefined是window对象的一个属性，但却不是anObj对象的一个属性。</p>
-<p>注意：尽管undefined是有特殊含义的属性，但却不是JavaScript的保留关键字。</p>
-<p>undefined参与任何数值计算时，其结果一定是NaN。</p>
-<p>随便说一下，NaN是全局对象（window）的另一个特殊属性，Infinity也是。这些特殊属性都不是JavaScript的保留关键字。<br>提高undefined性能</p>
-<p>当我们在程序中使用undefined值时，实际上使用的是window对象的undefined属性。</p>
-<p>同样，当我们定义一个变量但未赋予其初始值，例如：</p>
-<p>var aValue;</p>
-<p>这时，JavaScript在所谓的预编译时会将其初始值设置为对window.undefined属性的引用。</p>
-<p>于是，当我们将一个变量或值与undefined比较时，实际上是与window对象的undefined属性比较。这个比较过程中，JavaScript会搜索window对象名叫’undefined’的属性，然后再比较两个操作数的引用指针是否相同。</p>
-<p>由于window对象的属性值是非常多的，在每一次与undefined的比较中，搜索window对象的undefined属性都会花费时 间。在需要频繁与undefined进行比较的函数中，这可能会是一个性能问题点。因此，在这种情况下，我们可以自行定义一个局部的undefined变 量，来加快对undefined的比较速度。例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">   <span class="number">01</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">anyFunc</span>(<span class="params"></span>)</span><br><span class="line">02</span><br><span class="line">    </span>&#123;</span><br><span class="line"><span class="number">03</span></span><br><span class="line">        <span class="keyword">var</span> <span class="literal">undefined</span>;          <span class="comment">//自定义局部undefined变量</span></span><br><span class="line"><span class="number">04</span></span><br><span class="line">         </span><br><span class="line"><span class="number">05</span></span><br><span class="line">        <span class="keyword">if</span>(x == <span class="literal">undefined</span>)      <span class="comment">//作用域上的引用比较</span></span><br><span class="line"><span class="number">06</span></span><br><span class="line">         </span><br><span class="line"><span class="number">07</span></span><br><span class="line">         </span><br><span class="line"><span class="number">08</span></span><br><span class="line">        <span class="keyword">while</span>(y != <span class="literal">undefined</span>)   <span class="comment">//作用域上的引用比较</span></span><br><span class="line"><span class="number">09</span></span><br><span class="line">         </span><br><span class="line"><span class="number">10</span></span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
-<p>其中，定义undefined局部变量时，其初始值会是对window.undefined属性值的引用。新定义的局部undefined变 量存在与该函数的作用域上。在随后的比较操作中，JavaScript代码的书写方式没有任何的改变，但比较速度却很快。因为作用域上的变量数量会远远少 于window对象的属性，搜索变量的速度会极大提高。</p>
-<p>这就是许多前端JS框架为什么常常要自己定义一个局部undefined变量的原因。</p>
+        <p>今天碰到的第二个问题？一直以来用canvas画习惯了，一下子问我用css画呢？有点懵逼了 😂 😂 😂 😂 😂<br><a id="more"></a><br>效果图：<br><img src="http://o8lhvvxj2.bkt.clouddn.com/QQ20160614-0.png" alt="此处输入图片的描述"></p>
+<p>#三角形：</p>
+<p>#CSS<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#div1&#123;</span><br><span class="line">		      	  width: 0;</span><br><span class="line">		      	  height: 0;</span><br><span class="line">		      	  border-left: 20px solid transparent;</span><br><span class="line">		      	  border-right: 20px solid transparent;</span><br><span class="line">		      	  border-bottom: 40px solid red;</span><br><span class="line">		      &#125;</span><br><span class="line">		      #div2&#123;</span><br><span class="line">		      	width: 0;</span><br><span class="line">		      	  height: 0;</span><br><span class="line">		      	  border-left: 40px solid red;</span><br><span class="line">		      	  border-top: 40px solid red;</span><br><span class="line">		      	  border-right: 40px solid transparent;</span><br><span class="line">		      	 // 右面透明 小学生都能看出来</span><br><span class="line">		      	  border-bottom: 40px solid red;</span><br><span class="line">		      	  //别忘记设置 圆！！！四个角</span><br><span class="line">		      	  border-top-left-radius: 40px;</span><br><span class="line">		      	  border-top-right-radius: 40px; </span><br><span class="line">		      	   border-bottom-left-radius: 40px;</span><br><span class="line">		      	  border-bottom-right-radius: 40px; </span><br><span class="line">		      &#125;</span><br><span class="line">		      .div3&#123;</span><br><span class="line">		      	 width: 14px;</span><br><span class="line">		      	 height: 14px;</span><br><span class="line">		      	 border-radius: 7px;</span><br><span class="line">		      	 background: white;</span><br><span class="line">		      	 margin-top: -28px;</span><br><span class="line">		      	 margin-left: -10px;		    </span><br><span class="line">		      &#125;</span><br><span class="line">		      .div4&#123;</span><br><span class="line">		      	  width: 60px;</span><br><span class="line">		      	  height: 30px;</span><br><span class="line">		      	  background: deepskyblue;</span><br><span class="line">		      	  position: relative;</span><br><span class="line">		      	  border-radius: 10px;</span><br><span class="line">		      	  margin-left: 40px;</span><br><span class="line">		      &#125;</span><br><span class="line">		      .div4:before&#123;</span><br><span class="line">		      	content: "";</span><br><span class="line">		      	position: absolute;</span><br><span class="line">		      	right: 100%;</span><br><span class="line">		      	top:10px;</span><br><span class="line">		      	width: 0;</span><br><span class="line">		      	height: 0;</span><br><span class="line">		      	border-top:6px solid transparent;</span><br><span class="line">		      	border-right:12px solid deepskyblue;</span><br><span class="line">		      	border-bottom:6px solid transparent;</span><br><span class="line">		      &#125;</span><br><span class="line">		      .div4 p&#123;</span><br><span class="line">		      	width: 60px;</span><br><span class="line">		      	 height: 30px;</span><br><span class="line">		      	line-height: 30px;</span><br><span class="line">		      	font-size: 0.3em;</span><br><span class="line">		      	text-indent: 0.4em;</span><br><span class="line">		      &#125;</span><br></pre></td></tr></table></figure></p>
+<p>#HTML<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div2"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div4"</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>你个懵逼！！加油<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>#transparent是神马？<br>用来指定全透明色彩。<br>transparent是全透明黑色(black)的速记法，即一个类似rgba(0,0,0,0)这样的值。<br>在CSS1中，transparent被用来作为background-color的一个参数值，用于表示背景透明。<br>在CSS2中，border-color也开始接受transparent作为参数值，《Open eBook(tm) Publication Structure 1.0.1》[OEB101]延伸到color也接受transparent作为参数值。<br>在CSS3中，transparent被延伸到任何一个有color值的属性上。<br><img src="http://o8lhvvxj2.bkt.clouddn.com/transparent.png" alt="此处输入图片的描述"></p>
+<p>#补充笔记1中的一个小点<br>vertical-align中默认值是baseline也就是说图片的下边缘其实是和蓝色那条线对齐的,而文字元素<span>本身也有高度,所以会多出那么一部分空白的地方，也就是底部绿色线到蓝色线之间的距离。<br><img src="http://o8lhvvxj2.bkt.clouddn.com/1242010-f25bb156ff36db5f.png" alt="此处输入图片的描述"><br>那么为什么在没有文字的情况下图片也会有底部的间隙,那是因为在HTML5文档声明下，块状元素内部的内联元素的行为表现，就好像块状元素内部还有一个（更有可能两个-前后）看不见摸不着没有宽度没有实体的空白节点(摘录自张鑫旭的博客),所以默认vertical-align为baseline的图片会和父div之间存在空隙。</span></p>
 
       
     </div>
@@ -347,17 +327,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/11/title- web前端响应式设计总结/" rel="next" title="web前端响应式设计总结">
-                <i class="fa fa-chevron-left"></i> web前端响应式设计总结
+              <a href="/2016/06/14/title- 学习笔记1：-li--img-图片间有间隙的解决方法/" rel="next" title="学习笔记1：<li><img>图片间有间隙的解决方法">
+                <i class="fa fa-chevron-left"></i> 学习笔记1：<li><img>图片间有间隙的解决方法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/12/title- 移动端开发的一些技巧/" rel="prev" title="移动端开发的一些技巧">
-                移动端开发的一些技巧 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -383,8 +359,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/12/title- js中的null和undefined的区别/"
-           data-title="JavaScript中的null和undefined的区别" data-url="http://yoursite.com/2016/06/12/title- js中的null和undefined的区别/">
+      <div class="ds-thread" data-thread-key="2016/06/14/title- 用css画三角形？/"
+           data-title="用css画三角形？" data-url="http://yoursite.com/2016/06/14/title- 用css画三角形？/">
       </div>
     
   </div>
