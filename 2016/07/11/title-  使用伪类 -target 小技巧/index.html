@@ -94,12 +94,14 @@
 <meta property="og:description" content="标签（空格分隔）： js汇总
 
 伪类:target是指用来匹配文档(页面)的URI中某个标志符的目标元素。举个例子，这段文档被包在一个有ID为#target-test的元素下。如果你跳转到该url[https://bitsofco.de/the-target-trick#target-test] (https://bitsofco.de/the-target-trick#target-test),">
-<meta property="og:updated_time" content="2016-07-11T12:58:45.000Z">
+<meta property="og:image" content="http://o8lhvvxj2.bkt.clouddn.com/QB20160711-1.png">
+<meta property="og:updated_time" content="2016-07-11T13:48:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用伪类 :target 小技巧">
 <meta name="twitter:description" content="标签（空格分隔）： js汇总
 
 伪类:target是指用来匹配文档(页面)的URI中某个标志符的目标元素。举个例子，这段文档被包在一个有ID为#target-test的元素下。如果你跳转到该url[https://bitsofco.de/the-target-trick#target-test] (https://bitsofco.de/the-target-trick#target-test),">
+<meta name="twitter:image" content="http://o8lhvvxj2.bkt.clouddn.com/QB20160711-1.png">
 
 
 
@@ -264,7 +266,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-11T20:58:45+08:00" content="2016-07-11">
+            <time itemprop="dateCreated" datetime="2016-07-11T21:48:11+08:00" content="2016-07-11">
               2016-07-11
             </time>
           </span>
@@ -303,6 +305,7 @@
 <hr>
 <p>伪类:target是指用来匹配文档(页面)的URI中某个标志符的目标元素。举个例子，这段文档被包在一个有ID为#target-test的元素下。如果你跳转到该url[<a href="https://bitsofco.de/the-target-trick#target-test" target="_blank" rel="external">https://bitsofco.de/the-target-trick#target-test</a>] (<a href="https://bitsofco.de/the-target-trick#target-test),这时这个元素将会是目标并且该元素的伪类:target" target="_blank" rel="external">https://bitsofco.de/the-target-trick#target-test),这时这个元素将会是目标并且该元素的伪类:target</a> 的样式会生效。<br><a id="more"></a><br>关于伪类:target的例子是去高亮显示被引用到的页面的一部分。例如在例子中添加背景颜色或者边框来高亮显示。<br>但是最近我想到我们可以把伪类 :target放到更有用的地方，即在不用javascript的情况下在页面中实现交互。</p>
 <p>Example 1 - 隐藏或者显示内容<br>一个简单的应用是用伪类:target 去显示和隐藏目标内容。举个例子，在博客中我们可能不想在我们点击前显示评论内容。要达成这个目的我们可以用:target 。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href="#comments"&gt;Show Comments&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;section id="comments"&gt;  </span><br><span class="line">    &lt;h3&gt;Comments&lt;/h3&gt;</span><br><span class="line">    &lt;!-- Comments here... --&gt;</span><br><span class="line">    &lt;a href="#"&gt;Hide Comments&lt;/a&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">#comments:not(:target) &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">#comments:target &#123;</span><br><span class="line">    display: block;</span><br><span class="line">&#125;</span><br><span class="line">Demo of Hiding &amp; Showing Content using :target</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://o8lhvvxj2.bkt.clouddn.com/QB20160711-1.png" alt="此处输入图片的描述"></p>
 <p>演示例子</p>
 <p>Example 2 - 一个滑动抽屉导航<br>另一个用例是创建一个滑动抽屉导航。我们可以固定窗口的导航栏来保证我们在点击打开时不会跳来跳去。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#nav</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">400px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav</span><span class="selector-pseudo">:not(</span><span class="selector-pseudo">:target)</span> &#123;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">transition</span>: right <span class="number">1.5s</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#nav</span><span class="selector-pseudo">:target</span> &#123;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transition</span>: right <span class="number">1s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">Demo</span> <span class="selector-tag">of</span> <span class="selector-tag">A</span> <span class="selector-tag">Slide-Out</span> <span class="selector-tag">Navigation</span> <span class="selector-tag">Drawer</span> <span class="selector-tag">using</span> <span class="selector-pseudo">:target</span></span><br></pre></td></tr></table></figure></p>
 <p>演示例子</p>
